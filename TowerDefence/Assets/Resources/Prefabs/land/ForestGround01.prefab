@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6575500149489270611}
   - component: {fileID: 6572733714353490393}
   - component: {fileID: 6565674495890373529}
-  - component: {fileID: 135528954}
   - component: {fileID: -9017695132698299031}
+  - component: {fileID: 135528954}
   m_Layer: 0
   m_Name: ForestGround01
   m_TagString: Untagged
@@ -83,6 +83,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-9017695132698299031
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6578337069317399597}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9999998, y: 2, z: 2.0000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &135528954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,16 +112,3 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
---- !u!65 &-9017695132698299031
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6578337069317399597}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.9999998, y: 2, z: 2.0000005}
-  m_Center: {x: 0, y: 0, z: 0}

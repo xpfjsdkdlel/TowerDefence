@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 300891604}
   - component: {fileID: 300891603}
   m_Layer: 5
-  m_Name: INFINITE
+  m_Name: Infinite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -427,7 +427,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 300891604}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 49714850}
+        m_TargetAssemblyTypeName: MainScene, Assembly-CSharp
+        m_MethodName: SceneChange
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Infinite
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &300891604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -741,7 +753,7 @@ GameObject:
   - component: {fileID: 869953103}
   - component: {fileID: 869953102}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -946,7 +958,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 990572215}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 49714850}
+        m_TargetAssemblyTypeName: MainScene, Assembly-CSharp
+        m_MethodName: SceneChange
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GamePlay
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &990572215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1655,7 +1679,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2008283353}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 49714850}
+        m_TargetAssemblyTypeName: MainScene, Assembly-CSharp
+        m_MethodName: SceneChange
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: TowerUpgrade
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2008283353
 MonoBehaviour:
   m_ObjectHideFlags: 0
