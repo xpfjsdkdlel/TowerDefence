@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    public Color startColor;
-    public Color selectColor;
-    public Renderer blockColor;
-    public bool isBuild = false;
+    public Color startColor; // 블록의 색깔
+    public Color selectColor; // 블록이 선택되었을 때의 색깔
+    public Renderer blockColor; // 블록
+    public bool isBuild = false; // 블록에 타워가 건설되었는지 여부
+    public string towerName; // 건설된 타워의 이름
     void Start()
     {
         blockColor = gameObject.GetComponent<Renderer>();
@@ -16,10 +17,11 @@ public class Block : MonoBehaviour
     }
     private void OnMouseUp()
     {
+        blockColor.material.color = selectColor;
+        GameData.selectBlock = gameObject;
         if (isBuild == false)
         {
-            blockColor.material.color = selectColor;
-            GameData.selectBlock = gameObject;
+            
         }
     }
     private void Update()

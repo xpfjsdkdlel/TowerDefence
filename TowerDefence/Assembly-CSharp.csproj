@@ -73,6 +73,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\GUI PRO Kit - Casual Game\Scripts\PanelCasualGame.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\Scripts\GamePlayScene.cs" />
     <Compile Include="Assets\AurynSky\Dungeon Pack\Scripts\SpikeTrapDemo.cs" />
     <Compile Include="Assets\AurynSky\Forest Pack\Scripts\Rotator.cs" />
     <Compile Include="Assets\Scripts\Block.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\MagicArsenal\Demo\Scripts\MagicLoopScript.cs" />
     <Compile Include="Assets\GUI PRO Kit - Casual Game\Extensions\UIParticle\UIParticleSystem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\Scripts\TowerUpgradeScene.cs" />
     <Compile Include="Assets\MagicArsenal\Demo\Scripts\MagicDragMouseOrbit.cs" />
     <Compile Include="Assets\Scripts\Fade.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Assets\MagicArsenal\Effects\Scripts\MagicRotation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\MagicArsenal\Demo\Scripts\MagicFireProjectile.cs" />
+    <Compile Include="Assets\Scripts\InfiniteScene.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\MagicArsenal\Effects\Scripts\MagicBeamStatic.cs" />
     <Compile Include="Assets\MagicArsenal\Demo\Scripts\MagicLoadSceneOnClick.cs" />
@@ -118,9 +121,8 @@
     <Compile Include="Assets\Scripts\TitleScene.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\Scripts\InfiniteScene.cs" />
-    <Compile Include="Assets\Scripts\GamePlayScene.cs" />
-    <Compile Include="Assets\Scripts\TowerUpgradeScene.cs" />
+    <Compile Include="Assets\Scripts\Tower.cs" />
+    <Compile Include="Assets\Scripts\Blaze.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

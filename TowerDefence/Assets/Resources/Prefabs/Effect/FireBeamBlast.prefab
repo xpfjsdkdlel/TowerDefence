@@ -46,7 +46,7 @@ ParticleSystem:
   cullingMode: 3
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -4822,6 +4822,7 @@ GameObject:
   - component: {fileID: 8638118769791097579}
   - component: {fileID: 1661906188515106188}
   - component: {fileID: 5086087017755853452}
+  - component: {fileID: 3895109234157058133}
   m_Layer: 0
   m_Name: FireBeamBlast
   m_TagString: Untagged
@@ -4858,7 +4859,7 @@ ParticleSystem:
   cullingMode: 3
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -9596,3 +9597,15 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &3895109234157058133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4763241879222830521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90f787750af8004c9b60044f37e8ff9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
