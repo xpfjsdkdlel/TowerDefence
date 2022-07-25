@@ -8,7 +8,15 @@ public class InfiniteScene : MonoBehaviour
     void Start()
     {
         fade = GameObject.FindObjectOfType<Fade>();
-        if (fade != null)
+        if (fade == null)
+        {
+            fade = Resources.Load<Fade>("Prefabs/UI/Fade");
+            fade = Instantiate(fade);
+            if (fade != null)
+                fade.Init();
+            fade.FadeIn();
+        }
+        else
             fade.FadeIn();
     }
 

@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 56749a8987f0c484d8217c5cd79d0516
+  - enabled: 1
+    path: Assets/Scenes/GamePlayScene.unity
+    guid: 8a404f953c1b18e4db6d16f1f10ea308
+  - enabled: 1
+    path: Assets/Scenes/InfiniteScene.unity
+    guid: c5dbed373c62d7346ad27445fdf577c2
+  - enabled: 1
+    path: Assets/Scenes/TowerUpgradeScene.unity
+    guid: 1aff08424cd73594a99ee9ffd6738ad7
+  - enabled: 1
+    path: Assets/Scenes/Stage/Stage1.unity
+    guid: be4d5aa4d2397f240a21056f4a01f88f
   m_configObjects: {}

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
+    public int damage; // 공격력
     public float range; // 사거리
-    public GameObject target;
-    public Animator animator;
+    public int totalPrice; // 타워의 가격
+    public int upgradePrice; // 업그레이드에 드는 비용
+    public GameObject target; // 공격 목표
     public GameObject blaze; // 타워가 공격할 때 나오는 섬광
-    public Vector3 firePos;
-    // Start is called before the first frame update
+    Animator animator;
+    Vector3 firePos;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -47,17 +49,29 @@ public class Tower : MonoBehaviour
     void ATTACK()
     {
         Transform t = GetComponent<Transform>();
-        if(t != null)
-            for(int i = 0; i < t.childCount; i++)
+        if (t != null)
+        {
+            for (int i = 0; i < t.childCount; i++)
             {
                 firePos = t.GetChild(i).transform.position;
-                Instantiate(blaze, firePos, gameObject.transform.rotation);
+                if (blaze != null)
+                    Instantiate(blaze, firePos, gameObject.transform.rotation);
             }
+            if(gameObject.name == "tower_laser_blue_1" ||
+               gameObject.name == "tower_laser_blue_2" ||
+               gameObject.name == "tower_laser_blue_3")
+            {
+                // 투사체 방식
+            }
+            else
+            {
+                // 즉발 데미지
+            }
+        }
     }
     // 타워가 적을 바라보도록 하는 함수
     public void LookAt(Vector3 position)
     {
-        // x축 회전이 되지 않도록 y값을 0으로 설정합니다.
         Vector3 direction = position - transform.position;
         direction.y = 0;
         direction.Normalize();

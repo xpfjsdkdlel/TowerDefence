@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6411423546174058292}
   - component: {fileID: 1837028465593755099}
   - component: {fileID: 8358412062735545226}
-  m_Layer: 0
+  - component: {fileID: 1185422550}
+  m_Layer: 3
   m_Name: top_antipersonnel_blue_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,10 +110,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9065cb8854cf84c982cac9d6dea154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 0
+  damage: 0
+  range: 5
+  totalPrice: 0
+  upgradePrice: 0
   target: {fileID: 0}
-  animator: {fileID: 0}
-  blaze: {fileID: 0}
+  blaze: {fileID: 4763241879222830521, guid: de6c8db59dd84fe459e8915df45b9688, type: 3}
+--- !u!95 &1185422550
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826092067867775915}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88221b58d41ba6849a6092b2c5bf6d9e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3772739303188202788
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3772739303188202779}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +178,7 @@ GameObject:
   - component: {fileID: 9213467857851854373}
   - component: {fileID: 2589257455271883742}
   - component: {fileID: 4204743357497518868}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: towers_antipersonnel_blue_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +192,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7267732567461367792}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

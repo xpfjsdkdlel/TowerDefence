@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 550177703711580150}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 8670769012518577476}
   - component: {fileID: 6895069525930316174}
   - component: {fileID: 3179368600335012323}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tower_minigun_blue_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 3095821800518504193}
   - component: {fileID: 1479639218}
   - component: {fileID: 1479639219}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: top_minigun_blue_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,8 +255,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9065cb8854cf84c982cac9d6dea154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
   range: 4
+  totalPrice: 0
+  upgradePrice: 0
   target: {fileID: 0}
-  animator: {fileID: 0}
   blaze: {fileID: 4763241879222830521, guid: de6c8db59dd84fe459e8915df45b9688, type: 3}
-  firePos: {x: 0, y: 0, z: 0}

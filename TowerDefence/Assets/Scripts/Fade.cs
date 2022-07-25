@@ -13,7 +13,7 @@ public class Fade : MonoBehaviour
     bool update = false;
     float elapsed = 0;
     // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
         Transform t = transform.Find("Gate(L)");
         if(t != null)

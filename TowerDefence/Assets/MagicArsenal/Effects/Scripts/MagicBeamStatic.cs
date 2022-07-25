@@ -7,6 +7,7 @@ namespace MagicArsenal
 
 public class MagicBeamStatic : MonoBehaviour
 {
+        
 
     [Header("Prefabs")]
     public GameObject beamLineRendererPrefab; //Put a prefab with a line renderer onto here.
