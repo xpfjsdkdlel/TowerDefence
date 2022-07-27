@@ -754,25 +754,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1324834188, guid: b282c22d3f079f048bb2decc49e08ef3, type: 3}
-      propertyPath: damage
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1324834188, guid: b282c22d3f079f048bb2decc49e08ef3, type: 3}
-      propertyPath: totalPrice
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1324834188, guid: b282c22d3f079f048bb2decc49e08ef3, type: 3}
-      propertyPath: upgradePrice
-      value: 125
-      objectReference: {fileID: 0}
     - target: {fileID: 8604086844456215768, guid: b282c22d3f079f048bb2decc49e08ef3, type: 3}
       propertyPath: m_Name
       value: tower_gatling_blue_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8604086844456215768, guid: b282c22d3f079f048bb2decc49e08ef3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8947539524420697698, guid: b282c22d3f079f048bb2decc49e08ef3, type: 3}
       propertyPath: m_RootOrder
@@ -7715,10 +7699,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: towers_antipersonnel_blue_1
       objectReference: {fileID: 0}
-    - target: {fileID: 7267732567461367792, guid: 533777186a7fe3f4a8a4b6f29b1142f8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8041173763332691274, guid: 533777186a7fe3f4a8a4b6f29b1142f8, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -7762,22 +7742,6 @@ PrefabInstance:
     - target: {fileID: 8041173763332691274, guid: 533777186a7fe3f4a8a4b6f29b1142f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8358412062735545226, guid: 533777186a7fe3f4a8a4b6f29b1142f8, type: 3}
-      propertyPath: price
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8358412062735545226, guid: 533777186a7fe3f4a8a4b6f29b1142f8, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8358412062735545226, guid: 533777186a7fe3f4a8a4b6f29b1142f8, type: 3}
-      propertyPath: totalPrice
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8358412062735545226, guid: 533777186a7fe3f4a8a4b6f29b1142f8, type: 3}
-      propertyPath: upgradePrice
-      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 533777186a7fe3f4a8a4b6f29b1142f8, type: 3}
@@ -9584,18 +9548,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1332306474, guid: 8502081a314ca054aa8a06abffddfefd, type: 3}
-      propertyPath: damage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1332306474, guid: 8502081a314ca054aa8a06abffddfefd, type: 3}
-      propertyPath: totalPrice
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1332306474, guid: 8502081a314ca054aa8a06abffddfefd, type: 3}
-      propertyPath: upgradePrice
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 1260003522103520328, guid: 8502081a314ca054aa8a06abffddfefd, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -9643,10 +9595,6 @@ PrefabInstance:
     - target: {fileID: 1889187663081699058, guid: 8502081a314ca054aa8a06abffddfefd, type: 3}
       propertyPath: m_Name
       value: tower_laser_blue_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1889187663081699058, guid: 8502081a314ca054aa8a06abffddfefd, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8502081a314ca054aa8a06abffddfefd, type: 3}
@@ -10906,7 +10854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 0}
+  m_AnchoredPosition: {x: 468, y: 0}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1517685561
@@ -11869,10 +11817,6 @@ PrefabInstance:
     - target: {fileID: 5636255477335668348, guid: 305b646fdb59ad14896f022d766b6206, type: 3}
       propertyPath: m_Name
       value: tower_machinegun_blue_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5636255477335668348, guid: 305b646fdb59ad14896f022d766b6206, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 305b646fdb59ad14896f022d766b6206, type: 3}
@@ -13214,8 +13158,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1749828991, guid: 3bd21a2e1c0cbcd408e4f7be293b5b0a, type: 3}
+      propertyPath: blaze
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749828991, guid: 3bd21a2e1c0cbcd408e4f7be293b5b0a, type: 3}
       propertyPath: range
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749828991, guid: 3bd21a2e1c0cbcd408e4f7be293b5b0a, type: 3}
+      propertyPath: damage
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749828991, guid: 3bd21a2e1c0cbcd408e4f7be293b5b0a, type: 3}
+      propertyPath: totalPrice
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749828991, guid: 3bd21a2e1c0cbcd408e4f7be293b5b0a, type: 3}
+      propertyPath: upgradePrice
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1465023769407108996, guid: 3bd21a2e1c0cbcd408e4f7be293b5b0a, type: 3}
       propertyPath: m_RootOrder
@@ -13267,7 +13227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2242546288018320702, guid: 3bd21a2e1c0cbcd408e4f7be293b5b0a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bd21a2e1c0cbcd408e4f7be293b5b0a, type: 3}
@@ -15631,41 +15591,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 182388043430516899, guid: 7f109acccb3903644b9dac0bf3c47b72, type: 3}
-      propertyPath: damageText
-      value: 
-      objectReference: {fileID: 8359915571785615450, guid: 758df4d49ed2ad94594c9f4785f770cc, type: 3}
-    - target: {fileID: 182388044981253509, guid: 7f109acccb3903644b9dac0bf3c47b72, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 182388044981253510, guid: 7f109acccb3903644b9dac0bf3c47b72, type: 3}
-      propertyPath: m_SortingOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 894430858926319943, guid: 7f109acccb3903644b9dac0bf3c47b72, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 894430858926319943, guid: 7f109acccb3903644b9dac0bf3c47b72, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1770779266813011009, guid: 7f109acccb3903644b9dac0bf3c47b72, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3447376219729117628, guid: 7f109acccb3903644b9dac0bf3c47b72, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6892313065063521420, guid: 7f109acccb3903644b9dac0bf3c47b72, type: 3}
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6892313065063521420, guid: 7f109acccb3903644b9dac0bf3c47b72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.47
       objectReference: {fileID: 0}
     - target: {fileID: 6892313065063521420, guid: 7f109acccb3903644b9dac0bf3c47b72, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15673,7 +15605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6892313065063521420, guid: 7f109acccb3903644b9dac0bf3c47b72, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 6.24
       objectReference: {fileID: 0}
     - target: {fileID: 6892313065063521420, guid: 7f109acccb3903644b9dac0bf3c47b72, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15730,10 +15662,6 @@ PrefabInstance:
     - target: {fileID: 1362605154221367181, guid: 899a3f5e5a2363947b9a94b9a80ab18c, type: 3}
       propertyPath: m_Name
       value: tower_lethal_blue_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1362605154221367181, guid: 899a3f5e5a2363947b9a94b9a80ab18c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1847358237528769847, guid: 899a3f5e5a2363947b9a94b9a80ab18c, type: 3}
       propertyPath: m_RootOrder

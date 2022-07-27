@@ -187,7 +187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.0002670288, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &182388044981253510
@@ -209,7 +209,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_TargetDisplay: 0
 --- !u!114 &182388044981253511
 MonoBehaviour:
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 182388043430516899}
   m_Layer: 6
   m_Name: SpaceShip_1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -296,9 +296,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e4c4437a781c448b1b5569f708f3a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 5
-  HP: 5
-  damageText: {fileID: 6772363267508398389, guid: cff9d7cb0dc686e45bf7dc1b70812b5e, type: 3}
+  maxHP: 5000
+  HP: 5000
+  armor: 0
+  damageText: {fileID: 8359915571785615450, guid: 758df4d49ed2ad94594c9f4785f770cc, type: 3}
+  deathEffect: {fileID: 118354, guid: a70ce0386efb58548aff183d0131cc1c, type: 3}
   textPos: {fileID: 8695180901230345997}
   HPBar: {fileID: 182388043524518942}
 --- !u!1001 &4568105062878770900
@@ -326,7 +328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1203201287548057448, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0002670288
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1203201287548057448, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -367,6 +369,10 @@ PrefabInstance:
     - target: {fileID: 2015767234381114834, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
       propertyPath: m_Name
       value: spaceship_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015767234381114834, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2879551711419650709, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
       propertyPath: m_LocalPosition.x

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     public int damage; // 공격력
-    public float range; // 사거리
+    public int range; // 사거리
     public int totalPrice; // 타워의 가격
     public int upgradePrice; // 업그레이드에 드는 비용
     public GameObject target; // 공격 목표
@@ -51,22 +51,15 @@ public class Tower : MonoBehaviour
         Transform t = GetComponent<Transform>();
         if (t != null)
         {
+            // 공격시 총구에서 불꽃이 나오도록 처리
             for (int i = 0; i < t.childCount; i++)
             {
                 firePos = t.GetChild(i).transform.position;
                 if (blaze != null)
                     Instantiate(blaze, firePos, gameObject.transform.rotation);
             }
-            if(gameObject.name == "tower_laser_blue_1" ||
-               gameObject.name == "tower_laser_blue_2" ||
-               gameObject.name == "tower_laser_blue_3")
-            {
-                // 투사체 방식
-            }
-            else
-            {
-                // 즉발 데미지
-            }
+            // 즉발 대미지
+            target.GetComponent<Enemy>().GetDamage(damage);
         }
     }
     // 타워가 적을 바라보도록 하는 함수
