@@ -59,7 +59,8 @@ public class Tower : MonoBehaviour
                     Instantiate(blaze, firePos, gameObject.transform.rotation);
             }
             // 즉발 대미지
-            target.GetComponent<Enemy>().GetDamage(damage);
+            if(target != null)
+                target.GetComponent<Enemy>().GetDamage(damage);
         }
     }
     // 타워가 적을 바라보도록 하는 함수

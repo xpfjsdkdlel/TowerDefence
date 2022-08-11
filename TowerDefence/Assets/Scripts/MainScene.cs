@@ -8,6 +8,20 @@ public class MainScene : MonoBehaviour
     public Fade fade;
     void Start()
     {
+        if (PlayerPrefs.HasKey("Money"))
+            GameData.money = PlayerPrefs.GetInt("Money");
+        if (PlayerPrefs.HasKey("unlockGatling"))
+            GameData.unlockGatling = 1;
+        if (PlayerPrefs.HasKey("unlockLaser"))
+            GameData.unlockLaser = 1;
+        if (PlayerPrefs.HasKey("unlockLethal"))
+            GameData.unlockLethal = 1;
+        if (PlayerPrefs.HasKey("unlockMachinegun"))
+            GameData.unlockMachinegun = 1;
+        if (PlayerPrefs.HasKey("unlockMinigun"))
+            GameData.unlockMinigun = 1;
+        if (PlayerPrefs.HasKey("unlockNapalm"))
+            GameData.unlockNapalm = 1;
         fade = GameObject.FindObjectOfType<Fade>();
         if (fade == null)
         {

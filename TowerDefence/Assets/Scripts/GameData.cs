@@ -12,7 +12,13 @@ public static class GameData
     public static int selectStage = 1; // 현재 선택한 스테이지
     public static int clearStage = 1; // 클리어한 스테이지 수 
     public static int totalStage = 10; // 최대 스테이지수
-    public static int money; // 게임내 재화
+    public static int money = 100; // 게임내 재화
+    public static int unlockGatling = 0;
+    public static int unlockLaser = 0;
+    public static int unlockLethal = 0;
+    public static int unlockMachinegun = 0;
+    public static int unlockMinigun = 0;
+    public static int unlockNapalm = 0;
     public static void Reset()
     {
         isClear = false;
