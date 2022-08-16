@@ -7,6 +7,10 @@ public static class GameData
     // 인게임
     public static GameObject selectBlock; // 선택된 블록
     public static bool isClear = false; // 스테이지를 클리어 한 상태 여부
+    public static int wave; // 현재 웨이브
+    public static int mineral; // 광물
+    public static int life; // 현재 남은 목숨
+    public static int enemyCount; // 현재 적의 수
 
     // 게임 데이터
     public static int selectStage = 1; // 현재 선택한 스테이지

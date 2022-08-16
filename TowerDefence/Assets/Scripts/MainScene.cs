@@ -2,14 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainScene : MonoBehaviour
 {
     public Fade fade;
+    Text money;
     void Start()
     {
+        money = GameObject.Find("MoneyText").GetComponent<Text>();
+        if (PlayerPrefs.HasKey("clearStage"))
+            GameData.clearStage = PlayerPrefs.GetInt("clearStage");
         if (PlayerPrefs.HasKey("Money"))
             GameData.money = PlayerPrefs.GetInt("Money");
+        money.text = ("X " + GameData.money);
         if (PlayerPrefs.HasKey("unlockGatling"))
             GameData.unlockGatling = 1;
         if (PlayerPrefs.HasKey("unlockLaser"))
@@ -51,9 +57,5 @@ public class MainScene : MonoBehaviour
         if (fade != null)
             fade.FadeOut();
         Invoke("Load" + SceneName,2.0f);
-    }
-    void Update()
-    {
-        
     }
 }

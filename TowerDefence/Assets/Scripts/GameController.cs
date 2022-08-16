@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -14,12 +15,15 @@ public class GameController : MonoBehaviour
     Text waveText;
     Text mineralText;
     Text lifeText;
-    public bool stageClear = false;
     public int mineral;
     public int life;
+    WayPoints wayPoints;
 
     void Start()
     {
+        GameData.isClear = false;
+        GameData.mineral = mineral;
+        GameData.life = life;
         spawner = GameObject.Find("Spawner");
         fade = GameObject.FindObjectOfType<Fade>();
         if (fade == null)
@@ -32,6 +36,8 @@ public class GameController : MonoBehaviour
         }
         else
             fade.FadeIn();
+        wayPoints = GameObject.Find("WayPoints").GetComponent<WayPoints>();
+        wayPoints.Init();
         waveText = GameObject.Find("WaveText").GetComponent<Text>();
         mineralText = GameObject.Find("MineralText").GetComponent<Text>();
         lifeText = GameObject.Find("LifeText").GetComponent<Text>();
@@ -60,24 +66,50 @@ public class GameController : MonoBehaviour
     {
         this.mineral += mineral;
     }
-    void Clear()
+    void clear()
     {
+        GameData.money += 100 * GameData.selectStage;
         GameData.isClear = false;
-        if (GameData.clearStage <= GameData.selectStage)
+        if (GameData.clearStage < GameData.selectStage)
             GameData.clearStage = GameData.selectStage;
+        PlayerPrefs.SetInt("clearStage",GameData.clearStage);
+        PlayerPrefs.SetInt("Money", GameData.money);
         // 결과창 출력
     }
     void failed()
     {
         // 결과창 출력
     }
+    public void nextStage() // 다음 스테이지로 넘어가는 함수
+    {
+        GameData.selectStage++;
+        SceneManager.LoadScene("Stage" + GameData.selectStage);
+    }
+    public void LoadSelectStage() // 스테이지 선택 창으로 넘어가는 함수
+    {
+        SceneManager.LoadScene("GamePlayScene");
+    }
+    public void LoadReStart() // 스테이지를 재시작하는 함수
+    {
+        SceneManager.LoadScene("Stage" + GameData.selectStage);
+    }
+    public void LoadExit() // 메인화면으로 가는 함수
+    {
+        SceneManager.LoadScene("MainScene");
+    }
+    public void SceneChange(string SceneName)
+    {
+        if (fade != null)
+            fade.FadeOut();
+        Invoke("Load" + SceneName, 2.0f);
+    }
     void Update()
     {
-        waveText.text = "WAVE " + enemySpawner.wave;
-        mineralText.text = "" + mineral;
-        lifeText.text = "X " + life;
+        waveText.text = "WAVE " + GameData.wave;
+        mineralText.text = "" + GameData.mineral;
+        lifeText.text = "X " + GameData.life;
         if (GameData.isClear)
-            Clear();
+            clear();
         else if (life <= 0)
             failed();
     }

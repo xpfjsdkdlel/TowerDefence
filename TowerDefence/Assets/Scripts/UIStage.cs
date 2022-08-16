@@ -54,7 +54,7 @@ public class UIStage : MonoBehaviour
     }
     void MoveToStage()
     {
-        SceneManager.LoadSceneAsync("Stage"+GameData.selectStage.ToString());
+        SceneManager.LoadSceneAsync("Stage" + GameData.selectStage.ToString());
     }
     public void OnClickStage(int stage)
     {

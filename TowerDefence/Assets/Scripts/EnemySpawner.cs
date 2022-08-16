@@ -6,21 +6,23 @@ public class EnemySpawner : MonoBehaviour
 {
     GameController gameController;
     public GameObject[] waveList; // 웨이브 리스트
-    public bool isClear = false; // 웨이브 클리어 여부
     public int wave; // 현재 웨이브
     public int maxWave; // 최대 웨이브
     public int totalCount; // 총 적의 수
     public int enemyCount; // 현재 적의 수
     public void Init()
     {
-        wave = 1;
+        GameData.wave = 1;
+        wave = GameData.wave;
         gameController = GetComponent<GameController>();
         maxWave = waveList.Length;
         enemyCount = totalCount;
+        GameData.enemyCount = totalCount;
         Invoke("nextWave", 5);
     }
     void nextWave()
     {
+        GameData.enemyCount = totalCount;
         StartCoroutine("spawn");
     }
     IEnumerator spawn()
@@ -32,25 +34,21 @@ public class EnemySpawner : MonoBehaviour
         }
         yield break;
     }
-    void clear()
-    {
-
-    }
     // Update is called once per frame
     void Update()
     {
-        if (enemyCount <= 0)
+        if(GameData.isClear == false)
         {
-            isClear = true;
-            wave++;
-            enemyCount = totalCount;
-        }
-        if (isClear)
-        {
-            if (wave <= maxWave)
-                nextWave();
-            else
-                GameData.isClear = true;
+            GameData.wave = wave;
+            enemyCount = GameData.enemyCount;
+            if (enemyCount <= 0)
+            {
+                wave++;
+                if (wave <= maxWave)
+                    nextWave();
+                else
+                    GameData.isClear = true;
+            }
         }
     }
 }
