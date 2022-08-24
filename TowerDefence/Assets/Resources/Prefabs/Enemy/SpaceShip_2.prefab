@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2954771842002559937}
   - component: {fileID: 8367942745174763502}
-  - component: {fileID: -5028407399092279482}
   m_Layer: 6
   m_Name: SpaceShip_2
   m_TagString: Enemy
@@ -58,19 +57,6 @@ MonoBehaviour:
   enemySpawner: {fileID: 0}
   target: {fileID: 0}
   HPBar: {fileID: 8367942745268423507}
---- !u!114 &-5028407399092279482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724841377419454644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8df5058dd51a10a41ac1344775827106, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
 --- !u!1 &7137035320725181548
 GameObject:
   m_ObjectHideFlags: 0

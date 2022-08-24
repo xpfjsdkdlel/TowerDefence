@@ -8,8 +8,10 @@ public class GameController : MonoBehaviour
 {
     public GameObject selectBlock; // 선택된 블록
     public GameObject tower; // 생성될 타워
+    public GameObject text; // 광물이 부족할 때 출력되는 메세지
     public Block block;
     public Fade fade;
+    public Result result;
     EnemySpawner enemySpawner;
     GameObject spawner; // 몬스터가 생성될 위치
     Text waveText;
@@ -21,6 +23,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        GameData.gameover = false;
         GameData.isClear = false;
         GameData.mineral = mineral;
         GameData.life = life;
@@ -43,28 +46,32 @@ public class GameController : MonoBehaviour
         lifeText = GameObject.Find("LifeText").GetComponent<Text>();
         enemySpawner = spawner.GetComponent<EnemySpawner>();
         enemySpawner.Init();
+        result = GameObject.Find("Result").GetComponent<Result>();
+        result.Init();
     }
     public void BuildTower(string towerName)
     {
         tower = Resources.Load<GameObject>("PreFabs/Tower/" + towerName);
+        text = Resources.Load<GameObject>("PreFabs/UI/Enough");
         if (GameData.selectBlock != null)
         {
             block = GameData.selectBlock.GetComponent<Block>();
             selectBlock = GameData.selectBlock;
             Tower buildTower = tower.GetComponentInChildren<Tower>();
-            if(mineral >= buildTower.totalPrice)
+            if (GameData.mineral >= buildTower.totalPrice)
             {
-                Instantiate(tower, selectBlock.transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+                Instantiate(tower, selectBlock.transform.position + new Vector3(0, 1, 0), Quaternion.identity).transform.parent = selectBlock.transform;
                 GameData.selectBlock = null;
                 block.isBuild = true;
+                GameData.mineral -= buildTower.totalPrice;
             }
             else
-                Instantiate(tower, selectBlock.transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+            {
+                GameObject enough = GameObject.Find("Enough");
+                if(enough == null)
+                    Instantiate(text, new Vector3(0, 0, 0), Quaternion.identity);
+            }
         }
-    }
-    public void addMineral(int mineral)
-    {
-        this.mineral += mineral;
     }
     void clear()
     {
@@ -75,12 +82,14 @@ public class GameController : MonoBehaviour
         PlayerPrefs.SetInt("clearStage",GameData.clearStage);
         PlayerPrefs.SetInt("Money", GameData.money);
         // 결과창 출력
+        result.claer.SetActive(true);
     }
     void failed()
     {
         // 결과창 출력
+        result.fail.SetActive(true);
     }
-    public void nextStage() // 다음 스테이지로 넘어가는 함수
+    public void LoadNextStage() // 다음 스테이지로 넘어가는 함수
     {
         GameData.selectStage++;
         SceneManager.LoadScene("Stage" + GameData.selectStage);
@@ -108,9 +117,14 @@ public class GameController : MonoBehaviour
         waveText.text = "WAVE " + GameData.wave;
         mineralText.text = "" + GameData.mineral;
         lifeText.text = "X " + GameData.life;
-        if (GameData.isClear)
-            clear();
-        else if (life <= 0)
-            failed();
+        if (GameData.life <= 0)
+            GameData.gameover = true;
+        if(GameData.gameover)
+        {
+            if (GameData.isClear)
+                Invoke("clear", 3f);
+            else
+                Invoke("failed", 3f);
+        }
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2818543801622542541}
   - component: {fileID: 70243325051390983}
   - component: {fileID: -7215178509567515284}
-  - component: {fileID: 7162213445201643643}
+  - component: {fileID: 2163862885406972503}
   m_Layer: 6
   m_Name: spaceship_1_model
   m_TagString: Untagged
@@ -96,7 +96,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 20.285397, y: 4.6671057, z: 18.212156}
   m_Center: {x: 0.52619123, y: 2.3335528, z: 0}
---- !u!114 &7162213445201643643
+--- !u!114 &2163862885406972503
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

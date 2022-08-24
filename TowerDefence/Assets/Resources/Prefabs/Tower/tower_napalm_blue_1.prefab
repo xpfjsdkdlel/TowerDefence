@@ -227,8 +227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   range: 6
-  totalPrice: 0
-  upgradePrice: 0
+  totalPrice: 250
+  upgradePrice: 100
   target: {fileID: 0}
   blaze: {fileID: 0}
 --- !u!1 &8994174147085560638

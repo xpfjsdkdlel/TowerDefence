@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4676976916651631265}
   - component: {fileID: 7422779841485215339}
   - component: {fileID: 474139324634590628}
+  - component: {fileID: -1965193168663808419}
   m_Layer: 0
   m_Name: spaceship_2_model
   m_TagString: Untagged
@@ -95,3 +96,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 16.174189, y: 7.4633775, z: 19.607063}
   m_Center: {x: 0, y: 3.7316887, z: 0}
+--- !u!114 &-1965193168663808419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8936265911460411326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df5058dd51a10a41ac1344775827106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}

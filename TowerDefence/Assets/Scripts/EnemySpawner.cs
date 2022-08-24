@@ -37,7 +37,7 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameData.isClear == false)
+        if(GameData.gameover == false)
         {
             GameData.wave = wave;
             enemyCount = GameData.enemyCount;
@@ -47,7 +47,10 @@ public class EnemySpawner : MonoBehaviour
                 if (wave <= maxWave)
                     nextWave();
                 else
+                {
                     GameData.isClear = true;
+                    GameData.gameover = true;
+                }
             }
         }
     }
