@@ -10,11 +10,21 @@ public class Tower : MonoBehaviour
     public int upgradePrice; // 업그레이드에 드는 비용
     public GameObject target; // 공격 목표
     public GameObject blaze; // 타워가 공격할 때 나오는 섬광
+    public GameObject laser;
     Animator animator;
     Vector3 firePos;
     void Start()
     {
+        Transform t = GetComponent<Transform>();
         animator = GetComponent<Animator>();
+        if (gameObject.name.Contains("laser"))
+        { // 레이저 포탑
+            firePos = t.GetChild(0).transform.position;
+            if(blaze.name.Contains("Laser"))
+            {
+                laser = t.GetChild(0).GetChild(0).gameObject;
+            }
+        }
     }
     private void OnDrawGizmosSelected()
     {
@@ -51,17 +61,33 @@ public class Tower : MonoBehaviour
         Transform t = GetComponent<Transform>();
         if (t != null)
         {
-            // 공격시 총구에서 불꽃이 나오도록 처리
-            for (int i = 0; i < t.childCount; i++)
-            {
-                firePos = t.GetChild(i).transform.position;
-                if (blaze != null)
-                    Instantiate(blaze, firePos, gameObject.transform.rotation);
+            if(gameObject.name.Contains("napalm"))
+            { // 네이팜 포탑
+                for (int i = 0; i < t.childCount; i++)
+                {
+                    firePos = t.GetChild(i).transform.position;
+                    if (blaze != null)
+                        Instantiate(blaze, firePos, gameObject.transform.rotation);
+                }
             }
-            // 즉발 대미지
-            if(target != null)
-                target.GetComponent<Enemy>().GetDamage(damage);
+            else
+            { // 즉발 데미지
+              // 공격시 총구에서 불꽃이 나오도록 처리
+                for (int i = 0; i < t.childCount; i++)
+                {
+                    firePos = t.GetChild(i).transform.position;
+                    if (blaze != null)
+                        Instantiate(blaze, firePos, gameObject.transform.rotation);
+                }
+                if (target != null)
+                    target.GetComponent<Enemy>().GetDamage(damage);
+            }
         }
+    }
+    void getDamage(int damage)
+    {
+        if (target != null)
+            target.GetComponent<Enemy>().GetDamage(damage);
     }
     // 타워가 적을 바라보도록 하는 함수
     public void LookAt(Vector3 position)
@@ -73,8 +99,11 @@ public class Tower : MonoBehaviour
     }
     void Update()
     {
-        UpdateTarget();
-        if(target != null)
-            LookAt(target.transform.position);
+        if(!GameData.gameover)
+        {
+            UpdateTarget();
+            if (target != null)
+                LookAt(target.transform.position);
+        }
     }
 }

@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
     public int enemyCount; // 현재 적의 수
     public void Init()
     {
-        GameData.wave = 1;
+        GameData.Reset();
         wave = GameData.wave;
         gameController = GetComponent<GameController>();
         maxWave = waveList.Length;

@@ -297,6 +297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6892313065063521420}
   - component: {fileID: 182388043430516899}
+  - component: {fileID: -2267596867063395375}
   m_Layer: 6
   m_Name: SpaceShip_1
   m_TagString: Enemy
@@ -332,8 +333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e4c4437a781c448b1b5569f708f3a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 500
-  HP: 500
+  maxHP: 300
+  HP: 200
   armor: 0
   speed: 5
   mineral: 1
@@ -344,6 +345,19 @@ MonoBehaviour:
   enemySpawner: {fileID: 0}
   target: {fileID: 0}
   HPBar: {fileID: 182388043524518942}
+--- !u!65 &-2267596867063395375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010065553960065017}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 16.174189, y: 20, z: 19.607063}
+  m_Center: {x: 0, y: 3.7316887, z: 0}
 --- !u!1001 &4568105062878770900
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     public int mineral;
     public int life;
     WayPoints wayPoints;
+    bool end = false;
 
     void Start()
     {
@@ -114,17 +115,29 @@ public class GameController : MonoBehaviour
     }
     void Update()
     {
-        waveText.text = "WAVE " + GameData.wave;
-        mineralText.text = "" + GameData.mineral;
-        lifeText.text = "X " + GameData.life;
-        if (GameData.life <= 0)
-            GameData.gameover = true;
-        if(GameData.gameover)
+        if (!GameData.gameover)
         {
-            if (GameData.isClear)
-                Invoke("clear", 3f);
-            else
-                Invoke("failed", 3f);
+            waveText.text = "WAVE " + GameData.wave;
+            mineralText.text = "" + GameData.mineral;
+            lifeText.text = "X " + GameData.life;
+            if (GameData.life <= 0)
+                GameData.gameover = true;
+        }
+        else
+        {
+            if(!end)
+            {
+                if (GameData.isClear)
+                {
+                    Invoke("clear", 3f);
+                    end = true;
+                }
+                else
+                {
+                    Invoke("failed", 3f);
+                    end = true;
+                }
+            }
         }
     }
 }

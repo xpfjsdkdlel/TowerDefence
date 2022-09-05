@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
+    Transform t;
     public Color startColor; // 블록의 색깔
     public Color selectColor; // 블록이 선택되었을 때의 색깔
     public Renderer blockColor; // 블록
@@ -15,21 +16,20 @@ public class Block : MonoBehaviour
         blockColor = gameObject.GetComponent<Renderer>();
         startColor = blockColor.material.color;
         selectColor = Color.blue;
+        t = GetComponent<Transform>();
     }
     private void OnMouseUp()
     {
         blockColor.material.color = selectColor;
         GameData.selectBlock = gameObject;
-        if (isBuild) // 타워가 건설되어 있다면 정보를 가져옴
-        {
+        if (transform.childCount > 0)
             buildTower = transform.GetChild(0);
-            if (buildTower != null)
-                tower = buildTower.GetComponent<Tower>();
-        }
     }
     private void Update()
     {
         if(Input.GetMouseButtonDown(0))
             blockColor.material.color = startColor;
+        if (buildTower == null)
+            isBuild = false;
     }
 }
