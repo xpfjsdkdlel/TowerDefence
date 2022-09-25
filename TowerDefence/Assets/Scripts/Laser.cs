@@ -20,6 +20,5 @@ public class Laser : MonoBehaviour
             if (enemy != null)
                 enemy.GetDamage(damage);
         }
-        //Debug.Log("Ãæµ¹");
     }
 }

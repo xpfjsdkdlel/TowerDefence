@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    GameController gameController;
     public GameObject[] waveList; // 웨이브 리스트
     public int wave; // 현재 웨이브
     public int maxWave; // 최대 웨이브
@@ -14,7 +13,6 @@ public class EnemySpawner : MonoBehaviour
     {
         GameData.Reset();
         wave = GameData.wave;
-        gameController = GetComponent<GameController>();
         maxWave = waveList.Length;
         enemyCount = totalCount;
         GameData.enemyCount = totalCount;
@@ -30,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < totalCount; i++)
         {
             Instantiate(waveList[wave - 1], gameObject.transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(1.5f);
         }
         yield break;
     }
@@ -42,12 +40,15 @@ public class EnemySpawner : MonoBehaviour
             GameData.wave = wave;
             enemyCount = GameData.enemyCount;
             if (enemyCount <= 0)
-            {
+            {// 웨이브가 끝났을 때
                 wave++;
                 if (wave <= maxWave)
+                {// 다음 웨이브가 남아있다면 시작
                     nextWave();
+                    GameData.mineral += 100 + ((wave / 3) * 50);
+                }
                 else
-                {
+                {// 마지막 웨이브였다면 클리어 처리
                     GameData.isClear = true;
                     GameData.gameover = true;
                 }

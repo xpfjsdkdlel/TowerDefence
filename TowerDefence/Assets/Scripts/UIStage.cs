@@ -56,7 +56,7 @@ public class UIStage : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("Stage" + GameData.selectStage.ToString());
     }
-    public void OnClickStage(int stage)
+    void OnClickStage(int stage)
     {
         Fade fade = GameObject.FindObjectOfType<Fade>();
         if (fade != null)
@@ -79,14 +79,14 @@ public class UIStage : MonoBehaviour
 
             // 클리어된 스테이지라면 별 이미지와 체크이미지는 켜두고,
             // 락이미지를 꺼둡니다.
-            if (stage < GameData.clearStage)
+            if (stage < GameData.clearStage + 1)
             {
                 stageBtns[i].SetButtonInfo(stage, true);
             }
             // 클리어된 스테이지가 아니지만 현재 플레이할 스테이지라면
             // 버튼의 기능을 켜두고, 별이미지, 락이미지를 
             // 보이지 않도록 처리합니다.
-            else if (stage == GameData.clearStage)
+            else if (stage == GameData.clearStage + 1)
                 stageBtns[i].SetButtonInfo(stage, false, true);
             // 클리어된 스테이지가 아니라면 버튼의 기능을 꺼둡니다.
             else

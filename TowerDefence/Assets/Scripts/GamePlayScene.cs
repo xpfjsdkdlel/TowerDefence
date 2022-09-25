@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GamePlayScene : MonoBehaviour
 {
@@ -29,8 +30,16 @@ public class GamePlayScene : MonoBehaviour
             GameData.clearStage = PlayerPrefs.GetInt("ClearStage");
         }
     }
-
-    // Update is called once per frame
+    void LoadMain()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
+    public void SceneChange()
+    {
+        if (fade != null)
+            fade.FadeOut();
+        Invoke("LoadMain", 2.0f);
+    }
     void Update()
     {
         

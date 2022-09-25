@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TowerUpgradeScene : MonoBehaviour
 {
@@ -11,7 +12,15 @@ public class TowerUpgradeScene : MonoBehaviour
     void Start()
     {
         fade = GameObject.FindObjectOfType<Fade>();
-        if (fade != null)
+        if (fade == null)
+        {
+            fade = Resources.Load<Fade>("Prefabs/UI/Fade");
+            fade = Instantiate(fade);
+            if (fade != null)
+                fade.Init();
+            fade.FadeIn();
+        }
+        else
             fade.FadeIn();
         money = GameObject.Find("MoneyText").GetComponent<Text>();
         if (PlayerPrefs.HasKey("Money"))
@@ -34,6 +43,7 @@ public class TowerUpgradeScene : MonoBehaviour
             GameData.money -= GameData.price;
             money.text = ("X " + GameData.money);
             PlayerPrefs.SetInt("Money", GameData.money);
+            NClick();
         }
     }
     public void NClick()
@@ -72,6 +82,16 @@ public class TowerUpgradeScene : MonoBehaviour
             default:
                 break;
         }
+    }
+    void LoadMain()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
+    public void SceneChange()
+    {
+        if (fade != null)
+            fade.FadeOut();
+        Invoke("LoadMain", 2.0f);
     }
     void Update()
     {

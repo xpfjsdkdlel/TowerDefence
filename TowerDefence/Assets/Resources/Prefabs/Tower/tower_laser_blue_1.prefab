@@ -58,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889187663081699058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3693742707059284636}
@@ -258,11 +258,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 40
   range: 6
-  totalPrice: 125
-  upgradePrice: 125
-  target: {fileID: 0}
+  totalPrice: 225
+  upgradePrice: 325
+  towerType: tower_laser_blue_
+  towerLevel: 1
   blaze: {fileID: 2036758521942954659, guid: 3946f16636baba64bb8714187aa2b7e9, type: 3}
-  laser: {fileID: 0}
+  towerUpgrade: {fileID: 0}
 --- !u!1001 &5199432314681308946
 PrefabInstance:
   m_ObjectHideFlags: 0

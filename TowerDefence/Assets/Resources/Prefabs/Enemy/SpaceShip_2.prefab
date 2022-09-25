@@ -46,11 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e4c4437a781c448b1b5569f708f3a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 500
-  HP: 300
-  armor: 1
+  maxHP: 400
+  HP: 400
+  armor: 2
   speed: 4
-  mineral: 2
+  mineral: 5
   damageText: {fileID: 8359915571785615450, guid: 758df4d49ed2ad94594c9f4785f770cc, type: 3}
   deathEffect: {fileID: 118354, guid: a70ce0386efb58548aff183d0131cc1c, type: 3}
   textPos: {fileID: 7137035320725181548}
@@ -365,25 +365,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2954771842002559937}
     m_Modifications:
-    - target: {fileID: 474139324634590628, guid: 362050b16338f0c428c923c0beebf52a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8595170657996107012, guid: 362050b16338f0c428c923c0beebf52a, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8595170657996107012, guid: 362050b16338f0c428c923c0beebf52a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8595170657996107012, guid: 362050b16338f0c428c923c0beebf52a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8595170657996107012, guid: 362050b16338f0c428c923c0beebf52a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8595170657996107012, guid: 362050b16338f0c428c923c0beebf52a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -427,7 +411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8936265911460411326, guid: 362050b16338f0c428c923c0beebf52a, type: 3}
       propertyPath: m_Name
-      value: spaceship_2
+      value: spaceship_2_model
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 362050b16338f0c428c923c0beebf52a, type: 3}

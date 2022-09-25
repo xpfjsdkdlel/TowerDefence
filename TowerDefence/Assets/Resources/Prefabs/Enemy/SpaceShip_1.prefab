@@ -334,10 +334,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 300
-  HP: 200
+  HP: 300
   armor: 0
   speed: 5
-  mineral: 1
+  mineral: 5
   damageText: {fileID: 8359915571785615450, guid: 758df4d49ed2ad94594c9f4785f770cc, type: 3}
   deathEffect: {fileID: 118354, guid: a70ce0386efb58548aff183d0131cc1c, type: 3}
   textPos: {fileID: 1841172571782909104}
@@ -368,18 +368,6 @@ PrefabInstance:
     - target: {fileID: 1203201287548057448, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1203201287548057448, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1203201287548057448, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1203201287548057448, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1203201287548057448, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -423,67 +411,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2015767234381114834, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
       propertyPath: m_Name
-      value: spaceship_1
+      value: spaceship_1_model
       objectReference: {fileID: 0}
-    - target: {fileID: 2015767234381114834, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 2879551711419650709, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2879551711419650709, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2879551711419650709, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414535056447218911, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
-      propertyPath: HPBar
-      value: 
-      objectReference: {fileID: 182388043524518942}
-    - target: {fileID: 5414535056447218911, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
-      propertyPath: MaxHP
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414535056447218911, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
-      propertyPath: maxHP
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414535056447218911, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
-      propertyPath: TextPos
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5414535056447218911, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
-      propertyPath: DamageText
-      value: 
-      objectReference: {fileID: 6772363267508398389, guid: cff9d7cb0dc686e45bf7dc1b70812b5e, type: 3}
-    m_RemovedComponents:
-    - {fileID: 5414535056447218911, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
---- !u!1 &2638083282589522694 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2015767234381114834, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
-  m_PrefabInstance: {fileID: 4568105062878770900}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3447376219729117628 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1203201287548057448, guid: e521db6c959e06b4fbe0fed62d5b480d, type: 3}
   m_PrefabInstance: {fileID: 4568105062878770900}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4266788913342659275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2638083282589522694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8df5058dd51a10a41ac1344775827106, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}

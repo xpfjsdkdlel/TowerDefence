@@ -6,6 +6,6 @@ public class Blaze : MonoBehaviour
 {
     void Start()
     {
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 0.5f);
     }
 }

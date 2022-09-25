@@ -28,6 +28,8 @@ public class MainScene : MonoBehaviour
             GameData.unlockMinigun = 1;
         if (PlayerPrefs.HasKey("unlockNapalm"))
             GameData.unlockNapalm = 1;
+        if (PlayerPrefs.HasKey("unlockPlasma"))
+            GameData.unlockPlasma = 1;
         fade = GameObject.FindObjectOfType<Fade>();
         if (fade == null)
         {
@@ -57,5 +59,13 @@ public class MainScene : MonoBehaviour
         if (fade != null)
             fade.FadeOut();
         Invoke("Load" + SceneName,2.0f);
+    }
+    public void Exit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }
