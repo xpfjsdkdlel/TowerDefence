@@ -48,8 +48,16 @@ public class TowerUpgrade : MonoBehaviour
     {
         if(isOpen)
         {
-            upText.text = "" + gameController.towerInfo.upgradePrice;
-            sellText.text = "" + (gameController.towerInfo.totalPrice / 2);
+            if(gameController != null)
+            {
+                upText.text = "" + gameController.towerInfo.upgradePrice;
+                sellText.text = "" + (gameController.towerInfo.totalPrice / 2);
+            }
+            else
+            {
+                upText.text = "" + infiniteScene.towerInfo.upgradePrice;
+                sellText.text = "" + (infiniteScene.towerInfo.totalPrice / 2);
+            }
         }
         else if(!isOpen)
         {
