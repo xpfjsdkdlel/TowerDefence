@@ -6,16 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class InfiniteScene : MonoBehaviour
 {
-    public GameObject selectBlock; // 선택된 블록
-    public GameObject tower; // 생성될 타워
-    public GameObject text; // 광물이 부족할 때 출력되는 메세지
+    GameObject selectBlock; // 선택된 블록
+    GameObject tower; // 생성될 타워
+    GameObject text; // 광물이 부족할 때 출력되는 메세지
     GameObject selectedTower; // 선택된 타워
     public Tower towerInfo; // 선택된 타워의 정보
-    public GameObject towerUI; // 타워를 선택했을 때 출력할 업그레이드 창
     public TowerUpgrade towerUpgrade;
-    public Block block;
-    public Fade fade;
-    public Result result; // 결과창
+    Block block;
+    Fade fade;
+    Result result; // 결과창
     public int kill = 0; // 적 처치 수
     EnemySpawnerInfinite esi;
     GameObject spawner; // 몬스터가 생성될 위치
@@ -50,7 +49,6 @@ public class InfiniteScene : MonoBehaviour
         esi.Init();
         result = GameObject.Find("Result").GetComponent<Result>();
         result.Init();
-        towerUpgrade = towerUI.GetComponent<TowerUpgrade>();
         text = Resources.Load<GameObject>("PreFabs/UI/Enough");
     }
     public void BuildTower(string towerName)
@@ -109,7 +107,6 @@ public class InfiniteScene : MonoBehaviour
     public void SellTower()
     {
         GameData.mineral += towerInfo.totalPrice / 2;
-        //GameData.selectBlock.GetComponent<Block>().isBuild = false;
         Destroy(selectedTower);
         towerUpgrade.close();
     }

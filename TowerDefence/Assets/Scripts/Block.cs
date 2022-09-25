@@ -20,7 +20,7 @@ public class Block : MonoBehaviour
         selectColor = Color.blue;
         if (GameObject.Find("GameController") != null)
             gameController = GameObject.Find("GameController").GetComponent<GameController>();
-        else
+        else if(GameObject.Find("InfiniteScene") != null)
             infiniteScene = GameObject.Find("InfiniteScene").GetComponent<InfiniteScene>();
     }
     private void OnMouseUp()
@@ -32,7 +32,7 @@ public class Block : MonoBehaviour
             towerUpgrade = gameController.towerUpgrade;
             towerUpgrade.close();
         }
-        else
+        else if(infiniteScene != null)
         {
             towerUpgrade = infiniteScene.towerUpgrade;
             towerUpgrade.close();

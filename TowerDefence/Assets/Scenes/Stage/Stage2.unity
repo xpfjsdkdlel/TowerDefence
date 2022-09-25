@@ -389,12 +389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e33c71a4805484b9ba2f88d2e1e5ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectBlock: {fileID: 0}
-  tower: {fileID: 7267732567461367792, guid: 533777186a7fe3f4a8a4b6f29b1142f8, type: 3}
-  text: {fileID: 0}
-  block: {fileID: 0}
-  fade: {fileID: 0}
-  result: {fileID: 0}
+  towerInfo: {fileID: 0}
+  towerUpgrade: {fileID: 5317367123795687384}
   mineral: 300
   life: 4
 --- !u!1 &315810233
@@ -5000,7 +4996,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &35165217906397084
 MonoBehaviour:
@@ -5018,7 +5013,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &74594948435611455
 MonoBehaviour:
@@ -5036,7 +5030,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &80634876050681588
 MeshRenderer:
@@ -5150,7 +5143,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &109234858668500068
 GameObject:
@@ -5249,7 +5241,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &180543863399001757
 GameObject:
@@ -6016,7 +6007,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &352327861219999427
 Transform:
@@ -6089,7 +6079,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &397557490788769412
 MonoBehaviour:
@@ -6107,7 +6096,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &399397819937775768
 MonoBehaviour:
@@ -6125,7 +6113,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &404327961786793210
 MonoBehaviour:
@@ -6143,7 +6130,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &433078016319013178
 GameObject:
@@ -6283,7 +6269,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &461605538498522570
 Transform:
@@ -6315,7 +6300,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &464733903153477700
 GameObject:
@@ -6374,7 +6358,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &480522694594060181
 Transform:
@@ -6530,7 +6513,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &579872459047698834
 GameObject:
@@ -6821,7 +6803,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &719334761396061377
 MonoBehaviour:
@@ -6839,7 +6820,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &720655596971690271
 MonoBehaviour:
@@ -6857,7 +6837,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &726032663282184025
 MonoBehaviour:
@@ -6875,7 +6854,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &750569163504346553
 MonoBehaviour:
@@ -6893,7 +6871,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &762835204732952256
 MeshRenderer:
@@ -7041,7 +7018,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &855976170144270545
 Transform:
@@ -7220,7 +7196,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &875382050051301125
 MeshFilter:
@@ -7359,7 +7334,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &900324266489442625
 MeshFilter:
@@ -7385,7 +7359,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &907693210577483666
 MeshRenderer:
@@ -8159,7 +8132,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &1151669450413593117
 GameObject:
@@ -8210,7 +8182,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &1198397809202236816
 GameObject:
@@ -8324,7 +8295,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &1248188375293126106
 MonoBehaviour:
@@ -8342,7 +8312,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &1266829385195544000
 MeshRenderer:
@@ -8755,7 +8724,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &1414245019625475036
 Transform:
@@ -9133,7 +9101,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &1488016614280573133
 Transform:
@@ -9578,7 +9545,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &1594096097503789307
 Transform:
@@ -9610,7 +9576,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &1596835779209432505
 GameObject:
@@ -10964,7 +10929,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &1946123761684282471
 GameObject:
@@ -11304,7 +11268,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &2012045731007047866
 GameObject:
@@ -11354,7 +11317,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &2086672226908452974
 MonoBehaviour:
@@ -11372,7 +11334,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &2099650640392912913
 GameObject:
@@ -11423,7 +11384,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &2105318396677526943
 Transform:
@@ -11899,7 +11859,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &2224604588996476423
 Transform:
@@ -11972,7 +11931,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &2327810045920952972
 MonoBehaviour:
@@ -11990,7 +11948,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &2357104113781478677
 MonoBehaviour:
@@ -12008,7 +11965,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &2378691211005130527
 MeshRenderer:
@@ -12412,7 +12368,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &2512715571887387456
 MeshRenderer:
@@ -12737,7 +12692,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &2631527172999552600
 MeshRenderer:
@@ -13367,7 +13321,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &2762783731172080189
 MonoBehaviour:
@@ -13385,7 +13338,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &2771843157829936306
 MonoBehaviour:
@@ -13403,7 +13355,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &2776169322947602726
 MeshRenderer:
@@ -13470,7 +13421,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &2793386568117121590
 Transform:
@@ -13535,7 +13485,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &2812950775209058903
 MeshRenderer:
@@ -13616,7 +13565,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &2836995122353432449
 GameObject:
@@ -14102,7 +14050,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &2958319907974794909
 MeshRenderer:
@@ -14216,7 +14163,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &2975421096472590492
 MeshFilter:
@@ -14315,7 +14261,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &3027990367133572195
 GameObject:
@@ -14365,7 +14310,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &3049925407510860541
 MeshRenderer:
@@ -14481,7 +14425,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &3083081322630573628
 GameObject:
@@ -14517,7 +14460,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &3088815064645172146
 Transform:
@@ -14653,7 +14595,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &3146476508595350947
 MeshRenderer:
@@ -15187,7 +15128,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &3307456866015319501
 Transform:
@@ -15749,7 +15689,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &3610912580161880709
 MeshFilter:
@@ -15959,7 +15898,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &3718495760980260477
 MonoBehaviour:
@@ -15977,7 +15915,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &3748963271196445242
 MonoBehaviour:
@@ -15995,7 +15932,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &3752181724311579607
 MeshFilter:
@@ -16640,7 +16576,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &3855764052731168525
 MeshRenderer:
@@ -16850,7 +16785,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &3939222832652052158
 GameObject:
@@ -16972,7 +16906,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &3972903548625606366
 MeshRenderer:
@@ -17063,7 +16996,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &4036881340648594958
 Transform:
@@ -17531,7 +17463,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &4128630019757097107
 MeshRenderer:
@@ -17645,7 +17576,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &4221466005835968431
 MonoBehaviour:
@@ -17663,7 +17593,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &4250878440775045952
 MonoBehaviour:
@@ -17681,7 +17610,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &4252645495812512028
 MeshFilter:
@@ -18240,7 +18168,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &4316700629049386106
 GameObject:
@@ -18305,7 +18232,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &4347108496220687269
 MonoBehaviour:
@@ -18323,7 +18249,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &4369324257207436586
 GameObject:
@@ -18422,7 +18347,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &4474888614387294121
 MeshRenderer:
@@ -18521,7 +18445,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &4502991519379930343
 MonoBehaviour:
@@ -18539,7 +18462,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &4517098441339456133
 Transform:
@@ -18646,7 +18568,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &4557051366586762563
 MeshRenderer:
@@ -18840,7 +18761,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &4621403431295511265
 MeshFilter:
@@ -18947,7 +18867,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &4651260035093428058
 MonoBehaviour:
@@ -18965,7 +18884,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &4652384895320049522
 MeshFilter:
@@ -18991,7 +18909,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &4656643481822642806
 MeshRenderer:
@@ -19406,7 +19323,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &4757791290095627509
 GameObject:
@@ -19475,7 +19391,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &4760968410464157613
 Transform:
@@ -19925,7 +19840,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &4862727820855431578
 GameObject:
@@ -19976,7 +19890,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &4864854518199717875
 MonoBehaviour:
@@ -19994,7 +19907,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &4873977738328716875
 Transform:
@@ -20093,7 +20005,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &4895990209892718711
 MonoBehaviour:
@@ -20111,7 +20022,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &4900465602356799201
 MonoBehaviour:
@@ -20129,7 +20039,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &4906816515383742051
 MeshRenderer:
@@ -20228,7 +20137,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &4930934914273158192
 MonoBehaviour:
@@ -20246,7 +20154,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &4936771921043997939
 GameObject:
@@ -20618,7 +20525,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &5083581289991168390
 GameObject:
@@ -21005,7 +20911,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &5231825347451136353
 MeshRenderer:
@@ -21165,6 +21070,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3855209150030959980, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855209150030959980, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855209150030959980, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855209150030959980, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171497444146243123, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171497444146243123, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171497444146243123, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171497444146243123, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5317367121964617112, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -21443,6 +21380,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+--- !u!114 &5317367123795687384 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6096380832435897634, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+  m_PrefabInstance: {fileID: 5317367123795687383}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe8fa416e918b14193049a521e476d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &5327406853351287234
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21581,7 +21529,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &5405678027607890058
 Transform:
@@ -21709,7 +21656,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &5454896944145221842
 GameObject:
@@ -21809,7 +21755,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &5512635045860098403
 GameObject:
@@ -22085,7 +22030,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &5589118818730601365
 MeshRenderer:
@@ -22376,7 +22320,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &5658194017504705676
 MeshRenderer:
@@ -22572,7 +22515,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &5703181689742752220
 MeshFilter:
@@ -22670,7 +22612,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &5805581856030113661
 MeshRenderer:
@@ -22784,7 +22725,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &5837514512341340729
 MeshRenderer:
@@ -23300,7 +23240,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &5888991783658380976
 Transform:
@@ -23938,7 +23877,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &5969552844074437603
 Transform:
@@ -24179,7 +24117,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &6078316347143097348
 MonoBehaviour:
@@ -24197,7 +24134,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &6102118456809023569
 Transform:
@@ -24262,7 +24198,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &6108961902940047309
 MeshFilter:
@@ -24329,7 +24264,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &6198692143679339368
 GameObject:
@@ -24757,7 +24691,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &6280422285627874858
 MeshFilter:
@@ -25161,7 +25094,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &6442497219367803223
 Transform:
@@ -25317,7 +25249,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &6480617016790962637
 MeshFilter:
@@ -25343,7 +25274,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &6522705608077479956
 GameObject:
@@ -25538,7 +25468,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &6630952360709316496
 MonoBehaviour:
@@ -25556,7 +25485,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &6631739433823492348
 GameObject:
@@ -25813,7 +25741,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &6697729421472960799
 GameObject:
@@ -26303,7 +26230,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &6781884179816808503
 Transform:
@@ -26696,7 +26622,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &6881245505366431002
 GameObject:
@@ -26764,7 +26689,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &6940486846027350614
 MeshRenderer:
@@ -27521,7 +27445,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &7058559517412638603
 GameObject:
@@ -27572,7 +27495,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &7065302924819473222
 GameObject:
@@ -27912,7 +27834,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &7199726286701184395
 Transform:
@@ -28106,7 +28027,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &7250644038874312479
 Transform:
@@ -28870,7 +28790,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &7614947302497207975
 GameObject:
@@ -29313,7 +29232,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &7669174024533821048
 MeshRenderer:
@@ -29686,7 +29604,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &7793098472835013379
 Transform:
@@ -29751,7 +29668,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &7798841197572166764
 MeshFilter:
@@ -29795,7 +29711,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &7804410333953422495
 MeshFilter:
@@ -29922,7 +29837,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &7836132750453242343
 GameObject:
@@ -30265,7 +30179,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &7952598959033280846
 MeshRenderer:
@@ -30324,7 +30237,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &7960423194155996814
 MeshFilter:
@@ -30382,7 +30294,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &7987569099823433380
 MeshRenderer:
@@ -30481,7 +30392,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &8022557150812832827
 MeshRenderer:
@@ -30589,7 +30499,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &8048925621536768744
 MeshFilter:
@@ -30648,7 +30557,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &8059367087126481023
 MonoBehaviour:
@@ -30666,7 +30574,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &8060307714505141620
 Transform:
@@ -30738,7 +30645,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &8096796734254300452
 MonoBehaviour:
@@ -30756,7 +30662,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &8104811939804942037
 MeshRenderer:
@@ -30919,7 +30824,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &8159499844764215997
 MeshRenderer:
@@ -31025,7 +30929,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &8246261835596434633
 MonoBehaviour:
@@ -31043,7 +30946,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &8253849124182076254
 MeshFilter:
@@ -31238,7 +31140,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &8299849010993884686
 Transform:
@@ -31472,7 +31373,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &8346843158663404678
 GameObject:
@@ -31508,7 +31408,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &8430629210239351998
 MonoBehaviour:
@@ -31526,7 +31425,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &8497240479955809638
 MonoBehaviour:
@@ -31544,7 +31442,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &8506245099298426846
 MeshRenderer:
@@ -31658,7 +31555,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!114 &8552274979299943197
 MonoBehaviour:
@@ -31676,7 +31572,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!23 &8653113842984939812
 MeshRenderer:
@@ -31775,7 +31670,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &8686535411028659685
 GameObject:
@@ -31826,7 +31720,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &8689738506772322411
 Transform:
@@ -31899,7 +31792,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &8714561201409144823
 MeshFilter:
@@ -31925,7 +31817,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &8765146316741092797
 GameObject:
@@ -32024,7 +31915,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &8836468236975189828
 GameObject:
@@ -32123,7 +32013,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &8866749640410104192
 MeshFilter:
@@ -32190,7 +32079,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &8891642566880112156
 Transform:
@@ -32255,7 +32143,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!33 &8899308023389440060
 MeshFilter:
@@ -32811,7 +32698,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!4 &9014653778254065779
 Transform:
@@ -33649,7 +33535,6 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
 --- !u!1 &9146364653347255224
 GameObject:
@@ -33828,5 +33713,4 @@ MonoBehaviour:
   selectColor: {r: 0, g: 0, b: 0, a: 0}
   blockColor: {fileID: 0}
   isBuild: 0
-  buildTower: {fileID: 0}
   tower: {fileID: 0}
