@@ -4336,6 +4336,46 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5351300400562775842, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 833321444}
+    - target: {fileID: 5351300400562775842, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpgradeTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5351300400562775842, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InfiniteScene, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388997553944041490, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 833321444}
+    - target: {fileID: 6388997553944041490, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SellTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388997553944041490, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InfiniteScene, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029411324139963640, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029411324139963640, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029411324139963640, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029411324139963640, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
 --- !u!1 &212965392
@@ -7921,6 +7961,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506128731}
   m_Mesh: {fileID: 4300000, guid: f9fc7ec022f09a6418b1b6f97f0c887b, type: 3}
+--- !u!114 &508499936 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6096380832435897634, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+  m_PrefabInstance: {fileID: 209796968}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe8fa416e918b14193049a521e476d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &511134305
 GameObject:
   m_ObjectHideFlags: 0
@@ -12760,7 +12811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerInfo: {fileID: 0}
-  towerUpgrade: {fileID: 0}
+  towerUpgrade: {fileID: 508499936}
   kill: 0
   mineral: 1000
   life: 20

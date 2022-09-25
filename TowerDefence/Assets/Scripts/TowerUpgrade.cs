@@ -29,6 +29,7 @@ public class TowerUpgrade : MonoBehaviour
     {
         if(level3)
         {
+            upgrade.GetComponent<Button>().interactable = false;
             sell.GetComponent<Button>().interactable = true;
         }
         else

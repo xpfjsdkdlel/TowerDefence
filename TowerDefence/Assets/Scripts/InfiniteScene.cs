@@ -137,7 +137,7 @@ public class InfiniteScene : MonoBehaviour
         {
             mineralText.text = "" + GameData.mineral;
             lifeText.text = "X " + GameData.life;
-            if (GameData.life <= 0)
+            if (GameData.life <= 0) // 라이프가 0이되면 게임오버
                 GameData.gameover = true;
         }
         else
