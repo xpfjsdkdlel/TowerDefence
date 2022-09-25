@@ -391,7 +391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerInfo: {fileID: 0}
   towerUpgrade: {fileID: 5317367123795687384}
-  mineral: 300
+  mineral: 400
   life: 4
 --- !u!1 &315810233
 GameObject:
@@ -21377,6 +21377,22 @@ PrefabInstance:
     - target: {fileID: 5317367123579018038, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5351300400562775842, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 242630844}
+    - target: {fileID: 5351300400562775842, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpgradeTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388997553944041490, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 242630844}
+    - target: {fileID: 6388997553944041490, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SellTower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
