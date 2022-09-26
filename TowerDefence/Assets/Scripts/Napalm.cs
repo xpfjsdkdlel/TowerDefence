@@ -21,7 +21,7 @@ public class Napalm : MonoBehaviour
             if (enemy != null)
             {
                 enemy.GetDamage(damage);
-                enemy.Burning();
+                enemy.Burning(damage / 10);
             }
         }
     }

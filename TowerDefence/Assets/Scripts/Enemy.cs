@@ -14,18 +14,16 @@ public class Enemy : MonoBehaviour
     public GameObject damageText; // 대미지 텍스트
     public GameObject deathEffect; // 몬스터가 죽을 때 나오는 이펙트
     public GameObject textPos; // 대미지 텍스트가 출력되는 위치
-    public GameController gameController;
-    public EnemySpawnerInfinite spawnerInfinite;
     public Transform target; // 이동할 곳
     int wavepointIndex = 0;
     InfiniteScene infiniteScene;
     EnemySpawnerInfinite esi;
     public bool isBurn = false; // 화상 상태
-    public int burnDamage; // 화상 대미지
+    GameObject flame; // 화상 상태일 때 생성할 화염 오브젝트
+    int burnDamage; // 화상 대미지
     public GameObject HPBar; // 체력바
     void Start()
     {
-        gameController = GetComponent<GameController>();
         target = WayPoints.points[0];
         if (GameObject.Find("Spawner").GetComponent<EnemySpawnerInfinite>() != null)
         {
@@ -36,6 +34,7 @@ public class Enemy : MonoBehaviour
         if (GameObject.Find("InfiniteScene") != null)
             infiniteScene = GameObject.Find("InfiniteScene").GetComponent<InfiniteScene>();
         HP = maxHP;
+        flame = transform.GetChild(2).gameObject;
     }
     public void GetDamage(int damage)
     {// 일반 대미지
@@ -60,23 +59,28 @@ public class Enemy : MonoBehaviour
         if (armor < 0)
             armor = 0;
     }
-    public void Burning()
+    public void Burning(int damage)
     {
-        isBurn = true;
-        StartCoroutine("Burn", 0.5f);
+        if(!isBurn)
+        {
+            burnDamage = damage;
+            isBurn = true;
+            StartCoroutine("Burn", 0.5f);
+        }
     }
     IEnumerator Burn()
     {// 화상을 입었을 경우
         if (isBurn && HP >= 100)
         {// 체력이 100이상이면 화상대미지를 입음
-            GetTrueDamage(5); // 화상대미지는 고정대미지
-            // 불타는 모션 추가
+            GetTrueDamage(burnDamage); // 화상대미지는 고정대미지
+            flame.SetActive(true);// 불타는 모션 추가
             yield return new WaitForSeconds(0.5f);
             StartCoroutine("Burn", 0.5f);
         }
         else
         {// 체력이 100미만으로 내려갈경우 화상이 풀림
             isBurn = false;
+            flame.SetActive(false);
         }
         yield break;
     }

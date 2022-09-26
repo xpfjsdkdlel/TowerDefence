@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2036758521932289725}
   - component: {fileID: 1116774767670329265}
   - component: {fileID: -6367170504643407571}
+  - component: {fileID: 1543998165676284756}
   m_Layer: 0
   m_Name: Laser3
   m_TagString: Untagged
@@ -111,12 +112,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036758521942954659}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 500
-  m_Height: 100
+  m_Radius: 300
+  m_Height: 101
   m_Direction: 1
-  m_Center: {x: 0, y: 50, z: 0}
+  m_Center: {x: 0, y: 50, z: 30}
 --- !u!114 &-6367170504643407571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,3 +130,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456dbdb8430ae4a47b3cc7684927f53e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1543998165676284756
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036758521942954659}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

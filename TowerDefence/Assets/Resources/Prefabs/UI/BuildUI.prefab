@@ -1279,7 +1279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19177a1e082f93741826a644dda57d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 250
+  price: 300
 --- !u!1 &5317367122320203999
 GameObject:
   m_ObjectHideFlags: 0

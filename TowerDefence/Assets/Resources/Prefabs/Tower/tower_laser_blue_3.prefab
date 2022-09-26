@@ -271,18 +271,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6723055271679697920}
     m_Modifications:
-    - target: {fileID: 1116774767670329265, guid: e3b031429a9375c4b8e63b4f0f52d2ba, type: 3}
-      propertyPath: m_Height
-      value: 101
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116774767670329265, guid: e3b031429a9375c4b8e63b4f0f52d2ba, type: 3}
-      propertyPath: m_Radius
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 1116774767670329265, guid: e3b031429a9375c4b8e63b4f0f52d2ba, type: 3}
-      propertyPath: m_Center.z
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 2036758521941170867, guid: e3b031429a9375c4b8e63b4f0f52d2ba, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

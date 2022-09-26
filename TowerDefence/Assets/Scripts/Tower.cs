@@ -128,7 +128,8 @@ public class Tower : MonoBehaviour
     {
         if (!GameData.gameover)
         {
-            UpdateTarget();
+            if (target == null)
+                UpdateTarget();
             if (target != null)
                 LookAt(target.transform.position);
         }
