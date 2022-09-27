@@ -885,6 +885,10 @@ MonoBehaviour:
   - {fileID: 1724841377419454644, guid: 56766b19234c8b7489f405e8b797c6b5, type: 3}
   - {fileID: 1724841377419454644, guid: 5c359ac8b62245c499709ee2f6f9cafe, type: 3}
   - {fileID: 1724841377419454644, guid: a3771bbdf3fe4424a806c4fd8f3486a8, type: 3}
+  - {fileID: 1724841377419454644, guid: 8d58aa0bd29052a418b3d793a3a6b332, type: 3}
+  - {fileID: 1724841377419454644, guid: ffcf3659de593e449b8addbbfaf62ba8, type: 3}
+  - {fileID: 1724841377419454644, guid: 645c51c77f96b9e45b14bb88c4481751, type: 3}
+  - {fileID: 1724841377419454644, guid: c4c00d2bab9e74a438125159c68a9129, type: 3}
   wave: 0
   maxWave: 0
   totalCount: 20
@@ -21393,6 +21397,22 @@ PrefabInstance:
     - target: {fileID: 6388997553944041490, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SellTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029411324139963640, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029411324139963640, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029411324139963640, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029411324139963640, guid: 3e26aac775055174e933f613fc477e2d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e26aac775055174e933f613fc477e2d, type: 3}

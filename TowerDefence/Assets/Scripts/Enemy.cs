@@ -40,6 +40,8 @@ public class Enemy : MonoBehaviour
     {// 일반 대미지
         GameObject dmgText = Instantiate(damageText, textPos.transform.position, damageText.transform.rotation);
         int totalDamage = damage - armor;
+        if (totalDamage <= 0)
+            totalDamage = 1;
         dmgText.GetComponent<TMP_Text>().text = totalDamage.ToString();
         HP -= totalDamage;
         HPBar.GetComponent<Image>().fillAmount = HP / maxHP;
