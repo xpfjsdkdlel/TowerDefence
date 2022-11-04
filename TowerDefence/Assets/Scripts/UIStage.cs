@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class UIStage : MonoBehaviour
 {
-    private List<StageButton> stageBtns = new List<StageButton>();
-    private int currentPage = 0;
-    private int maxPage = 0;
+    List<StageButton> stageBtns = new List<StageButton>();
+    int currentPage = 0;
+    int maxPage = 0;
+    BGM bgm; // 배경음악 관리자
+    [SerializeField]
+    AudioClip clip; // 변경할 배경음악
+    AudioSource audioSource; // 효과음
+    GameObject gpScene;
     public void Init()
     {
         int page = GameData.totalStage / 4;
@@ -36,17 +41,21 @@ public class UIStage : MonoBehaviour
             btn.Init(OnClickStage);
         }
         SetPage(0);
+        // 오디오 소스를 찾습니다.
+        gpScene = GameObject.Find("GamePlaySceneManager");
+        audioSource = gpScene.GetComponent<AudioSource>();
     }
     void OnClickLeftPage()
     {
+        audioSource.Play();
         --currentPage;
         if (currentPage < 0)
             currentPage = 0;
-
         SetPage(currentPage);
     }
     void OnClickRightPage()
     {
+        audioSource.Play();
         ++currentPage;
         if (currentPage >= maxPage)
             currentPage = maxPage - 1;
@@ -54,6 +63,9 @@ public class UIStage : MonoBehaviour
     }
     void MoveToStage()
     {
+        bgm = GameObject.FindObjectOfType<BGM>();
+        if(bgm != null)
+            bgm.stopBGM();
         SceneManager.LoadSceneAsync("Stage" + GameData.selectStage.ToString());
     }
     void OnClickStage(int stage)
@@ -63,6 +75,7 @@ public class UIStage : MonoBehaviour
             fade.FadeOut();
         Invoke("MoveToStage", 1.0f);
         GameData.selectStage = stage;
+        audioSource.Play();
     }
     void SetPage(int page)
     {

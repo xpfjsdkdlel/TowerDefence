@@ -8,7 +8,11 @@ public class TowerUpgradeScene : MonoBehaviour
 {
     public Fade fade;
     public GameObject confrim;
+    BGM bgm; // 배경음악 관리자
+    [SerializeField]
+    AudioClip clip; // 변경할 배경음악
     Text money;
+    AudioSource audioSource; // 효과음
     void Start()
     {
         fade = GameObject.FindObjectOfType<Fade>();
@@ -18,15 +22,23 @@ public class TowerUpgradeScene : MonoBehaviour
             fade = Instantiate(fade);
             if (fade != null)
                 fade.Init();
-            fade.FadeIn();
         }
-        else
-            fade.FadeIn();
+        fade.FadeIn();
+        bgm = GameObject.FindObjectOfType<BGM>();
+        if (bgm == null)
+        {
+            bgm = Resources.Load<BGM>("Prefabs/UI/BGM");
+            bgm = Instantiate(bgm);
+            if (bgm != null)
+                bgm.Init();
+        }
+        bgm.playBGM(clip);
         money = GameObject.Find("MoneyText").GetComponent<Text>();
         if (PlayerPrefs.HasKey("Money"))
             GameData.money = PlayerPrefs.GetInt("Money");
         money.text = ("X " + GameData.money);
         confrim = GameObject.Find("Confrim");
+        audioSource = GetComponent<AudioSource>();
     }
     public void YClick()
     {
@@ -48,12 +60,13 @@ public class TowerUpgradeScene : MonoBehaviour
     }
     public void NClick()
     {
+        audioSource.Play();
         for (int i = 0; i < confrim.transform.childCount; i++)
             confrim.transform.GetChild(i).gameObject.SetActive(false);
     }
     public void buyTower(int number)
     {
-        switch(number)
+        switch (number)
         {
             case 0:
                 GameData.unlockGatling = 1;
@@ -89,12 +102,9 @@ public class TowerUpgradeScene : MonoBehaviour
     }
     public void SceneChange()
     {
+        audioSource.Play();
         if (fade != null)
             fade.FadeOut();
         Invoke("LoadMain", 2.0f);
-    }
-    void Update()
-    {
-        
     }
 }

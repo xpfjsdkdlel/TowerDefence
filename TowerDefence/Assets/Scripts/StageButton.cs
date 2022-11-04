@@ -6,10 +6,10 @@ using TMPro;
 
 public class StageButton : MonoBehaviour
 {
-    private TMP_Text stageText;
-    private Image starImage;
-    private Image lockImage;
-    private System.Action<int> handle;
+    TMP_Text stageText;
+    Image starImage;
+    Image lockImage;
+    System.Action<int> handle;
     // 버튼이 클릭될때 호출될 함수
     void OnClickButton()
     {
@@ -26,7 +26,6 @@ public class StageButton : MonoBehaviour
         // 버튼이 클릭되었을때 실질적으로 실행될 함수를
         // 외부로부터 받습니다.
         this.handle = handle;
-
         // 버튼에 함수를 연결합니다.
         Button button = GetComponent<Button>();
         if (button != null)

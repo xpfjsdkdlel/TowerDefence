@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GamePlayScene : MonoBehaviour
 {
-    public Fade fade;
-    // Start is called before the first frame update
+    Fade fade;
+    BGM bgm; // 배경음악 관리자
+    [SerializeField]
+    AudioClip clip; // 변경할 배경음악
+    AudioSource audioSource; // 효과음
     void Start()
     {
         fade = GameObject.FindObjectOfType<Fade>();
@@ -16,11 +19,18 @@ public class GamePlayScene : MonoBehaviour
             fade = Instantiate(fade);
             if (fade != null)
                 fade.Init();
-            fade.FadeIn();
         }
-        else
-            fade.FadeIn();
-
+        fade.FadeIn();
+        bgm = GameObject.FindObjectOfType<BGM>();
+        if (bgm == null)
+        {
+            bgm = Resources.Load<BGM>("Prefabs/UI/BGM");
+            bgm = Instantiate(bgm);
+            if (bgm != null)
+                bgm.Init();
+        }
+        bgm.playBGM(clip);
+        audioSource = GetComponent<AudioSource>();
         UIStage uiStage = GameObject.FindObjectOfType<UIStage>();
         if (uiStage != null)
             uiStage.Init();
@@ -36,12 +46,9 @@ public class GamePlayScene : MonoBehaviour
     }
     public void SceneChange()
     {
+        audioSource.Play();
         if (fade != null)
             fade.FadeOut();
         Invoke("LoadMain", 2.0f);
-    }
-    void Update()
-    {
-        
     }
 }

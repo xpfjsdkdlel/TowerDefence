@@ -10,14 +10,14 @@ public class Tower : MonoBehaviour
     public int upgradePrice; // 업그레이드에 드는 비용
     public string towerType; // 타워의 종류
     public int towerLevel; // 타워의 레벨
-    public GameObject blaze; // 타워가 공격할 때 나오는 섬광
+    [SerializeField]
+    GameObject blaze; // 타워가 공격할 때 나오는 섬광
     GameObject target; // 공격 목표
     GameController gameController;
     InfiniteScene infiniteScene;
-    Animator animator;
-    Vector3 firePos;
-    [SerializeField]
-    TowerUpgrade towerUpgrade;
+    Animator animator; // 애니메이션
+    Vector3 firePos; // 투사체와 불꽃이 나올 위치
+    AudioSource audioSource; // 발사음
     void Start()
     {
         Transform t = GetComponent<Transform>();
@@ -26,6 +26,7 @@ public class Tower : MonoBehaviour
             gameController = GameObject.Find("GameController").GetComponent<GameController>();
         else
             infiniteScene = GameObject.Find("InfiniteScene").GetComponent<InfiniteScene>();
+        audioSource = GetComponent<AudioSource>();
     }
     private void OnDrawGizmosSelected()
     {
@@ -47,12 +48,12 @@ public class Tower : MonoBehaviour
             }
         }
         if (nearEnemy != null && shortestDistance <= range)
-        {
+        {// 가장 가까운 몬스터 공격
             target = nearEnemy;
             animator.SetBool("ATTACK", true);
         }
         else
-        {
+        {// 사거리안에 몬스터가 없을 경우 대기상태로 전환
             target = null;
             animator.SetBool("ATTACK", false);
         }
@@ -71,6 +72,7 @@ public class Tower : MonoBehaviour
             }
             if (target != null)
                 target.GetComponent<Enemy>().GetDamage(damage);
+            audioSource.Play();
         }
     }
     void trueDamageATTACK()
@@ -87,6 +89,7 @@ public class Tower : MonoBehaviour
             }
             if (target != null)
                 target.GetComponent<Enemy>().GetTrueDamage(damage); // 고정대미지
+            audioSource.Play();
         }
     }
     void Plasma()
@@ -99,7 +102,10 @@ public class Tower : MonoBehaviour
             {
                 firePos = t.GetChild(i).transform.position;
                 if (blaze != null)
+                {
                     Instantiate(blaze, firePos, gameObject.transform.rotation);
+                    audioSource.Play();
+                }
             }
             if (target != null)
             {
@@ -107,6 +113,10 @@ public class Tower : MonoBehaviour
                 Instantiate(plasma, firePos, gameObject.transform.rotation);
             }
         }
+    }
+    void soundEffect()
+    {
+        audioSource.Play();
     }
     // 타워가 적을 바라보도록 하는 함수
     public void LookAt(Vector3 position)
@@ -118,19 +128,26 @@ public class Tower : MonoBehaviour
     }
     private void OnMouseUp()
     {// 타워를 클릭했을때 선택된 상태로 변경
-        GameData.selectBlock = gameObject.transform.parent.gameObject;
+        GameData.selectBlock = transform.parent.parent.gameObject;
         if (gameController != null)
-            gameController.selectTower(gameObject.transform.parent.gameObject);
+            gameController.selectTower(transform.parent.gameObject);
         else if (infiniteScene != null)
-            infiniteScene.selectTower(gameObject.transform.parent.gameObject);
+            infiniteScene.selectTower(transform.parent.gameObject);
     }
     void Update()
     {
         if (!GameData.gameover)
         {
-            UpdateTarget();
             if (target != null)
+            {// 타겟이 있을경우 타겟을 바라보고, 타겟이 없거나 사거리밖에 있을경우 타겟을 변경
                 LookAt(target.transform.position);
+                if (Vector3.Distance(transform.position, target.transform.position) > range)
+                    target = null;
+            }
+            else
+                UpdateTarget();
         }
+        else
+            animator.SetBool("ATTACK", false);
     }
 }

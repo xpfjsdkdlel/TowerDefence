@@ -494,10 +494,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 7
   price: 20000
-  confrim: {fileID: 0}
-  button: {fileID: 0}
-  image: {fileID: 0}
-  sold: {fileID: 0}
 --- !u!1 &178389909
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,10 +950,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 4
   price: 7000
-  confrim: {fileID: 0}
-  button: {fileID: 0}
-  image: {fileID: 0}
-  sold: {fileID: 0}
 --- !u!1 &294052950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1682,7 +1674,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2116001033826453977, guid: 32635dfd034153e49b988e1315c078c7, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2116001033826453977, guid: 32635dfd034153e49b988e1315c078c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2268,7 +2260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3988018896380821409, guid: 4b88b816c6d71ba46aa6fa12d3820220, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3988018896380821409, guid: 4b88b816c6d71ba46aa6fa12d3820220, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2544,10 +2536,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 2
   price: 3000
-  confrim: {fileID: 0}
-  button: {fileID: 0}
-  image: {fileID: 0}
-  sold: {fileID: 0}
 --- !u!1 &867126569
 GameObject:
   m_ObjectHideFlags: 0
@@ -2700,10 +2688,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 5
   price: 10000
-  confrim: {fileID: 0}
-  button: {fileID: 0}
-  image: {fileID: 0}
-  sold: {fileID: 0}
 --- !u!1 &885938950
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,10 +3299,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 0
   price: 500
-  confrim: {fileID: 0}
-  button: {fileID: 0}
-  image: {fileID: 0}
-  sold: {fileID: 0}
 --- !u!1 &984960329
 GameObject:
   m_ObjectHideFlags: 0
@@ -3622,10 +3602,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 3
   price: 5000
-  confrim: {fileID: 0}
-  button: {fileID: 0}
-  image: {fileID: 0}
-  sold: {fileID: 0}
 --- !u!1 &1039880063
 GameObject:
   m_ObjectHideFlags: 0
@@ -3636,6 +3612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1039880065}
   - component: {fileID: 1039880064}
+  - component: {fileID: 1039880066}
   m_Layer: 0
   m_Name: TowerUpgradeScene
   m_TagString: Untagged
@@ -3657,6 +3634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 0}
   confrim: {fileID: 3988018896380821421, guid: 4b88b816c6d71ba46aa6fa12d3820220, type: 3}
+  clip: {fileID: 8300000, guid: 533574a3365382645a70506d23daea3c, type: 3}
 --- !u!4 &1039880065
 Transform:
   m_ObjectHideFlags: 0
@@ -3669,8 +3647,104 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1039880066
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039880063}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ebc818708194d134482cf917b2b72fe9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1047573583
 GameObject:
   m_ObjectHideFlags: 0
@@ -3980,10 +4054,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 0
   price: 0
-  confrim: {fileID: 0}
-  button: {fileID: 0}
-  image: {fileID: 0}
-  sold: {fileID: 0}
 --- !u!1 &1175683952
 GameObject:
   m_ObjectHideFlags: 0
@@ -4136,10 +4206,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 6
   price: 15000
-  confrim: {fileID: 0}
-  button: {fileID: 0}
-  image: {fileID: 0}
-  sold: {fileID: 0}
 --- !u!1 &1266167996
 GameObject:
   m_ObjectHideFlags: 0
@@ -4732,10 +4798,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 8
   price: 25000
-  confrim: {fileID: 0}
-  button: {fileID: 0}
-  image: {fileID: 0}
-  sold: {fileID: 0}
 --- !u!1 &1577583131
 GameObject:
   m_ObjectHideFlags: 0
@@ -5059,7 +5121,7 @@ RectTransform:
   - {fileID: 93626242}
   - {fileID: 1416454756}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5280,7 +5342,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1732416935
 GameObject:
@@ -6558,7 +6620,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 1
   price: 1000
-  confrim: {fileID: 0}
-  button: {fileID: 0}
-  image: {fileID: 0}
-  sold: {fileID: 0}

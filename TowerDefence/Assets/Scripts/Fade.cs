@@ -7,12 +7,11 @@ public class Fade : MonoBehaviour
 {
     Image leftImage;
     Image rightImage;
-
+    AudioSource audioSource;
     float speed = 1.0f;
     bool isOpen = false;
     bool update = false;
     float elapsed = 0;
-    // Start is called before the first frame update
     public void Init()
     {
         Transform t = transform.Find("Gate(L)");
@@ -21,11 +20,13 @@ public class Fade : MonoBehaviour
         t = transform.Find("Gate(R)");
         if (t != null)
             rightImage = t.GetComponent<Image>();
+        audioSource = GetComponent<AudioSource>();
         DontDestroyOnLoad(gameObject);
     }
     // 씬이 전환되기 전 게이트가 닫힘
     public void FadeOut()
     {
+        audioSource.Play();
         update = true;
         elapsed = 0;
         isOpen = true;
@@ -33,6 +34,7 @@ public class Fade : MonoBehaviour
     // 씬이 전환된 후 게이트가 열림
     public void FadeIn()
     {
+        audioSource.Play();
         update = true;
         elapsed = 0;
         isOpen = false;

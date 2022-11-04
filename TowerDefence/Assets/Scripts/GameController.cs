@@ -24,6 +24,10 @@ public class GameController : MonoBehaviour
     public int life; // 해당 스테이지의 라이프
     WayPoints wayPoints;
     bool end = false;
+    BGM bgm; // 배경음악 관리자
+    [SerializeField]
+    AudioClip clip; // 변경할 배경음악
+    AudioSource audioSource; // 효과음
     void Start()
     {
         GameData.gameover = false;
@@ -38,10 +42,17 @@ public class GameController : MonoBehaviour
             fade = Instantiate(fade);
             if (fade != null)
                 fade.Init();
-            fade.FadeIn();
         }
-        else
-            fade.FadeIn();
+        fade.FadeIn();
+        bgm = GameObject.FindObjectOfType<BGM>();
+        if (bgm == null)
+        {
+            bgm = Resources.Load<BGM>("Prefabs/UI/BGM");
+            bgm = Instantiate(bgm);
+            if (bgm != null)
+                bgm.Init();
+        }
+        bgm.playBGM(clip);
         wayPoints = GameObject.Find("WayPoints").GetComponent<WayPoints>();
         wayPoints.Init();
         waveText = GameObject.Find("WaveText").GetComponent<Text>();
@@ -52,6 +63,7 @@ public class GameController : MonoBehaviour
         result = GameObject.Find("Result").GetComponent<Result>();
         result.Init();
         text = Resources.Load<GameObject>("PreFabs/UI/Enough");
+        audioSource = GetComponent<AudioSource>();
     }
     public void BuildTower(string towerName)
     {
@@ -122,11 +134,13 @@ public class GameController : MonoBehaviour
         PlayerPrefs.SetInt("Money", GameData.money);
         // 결과창 출력
         result.claer.SetActive(true);
+        bgm.stopBGM();
     }
     void failed()
     {
         // 결과창 출력
         result.fail.SetActive(true);
+        bgm.stopBGM();
     }
     public void LoadNextStage() // 다음 스테이지로 넘어가는 함수
     {

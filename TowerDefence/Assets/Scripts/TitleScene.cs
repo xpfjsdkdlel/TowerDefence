@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class TitleScene : MonoBehaviour
 {
+    BGM bgm; // 배경음악 관리자
+    [SerializeField]
+    AudioClip clip; // 변경할 배경음악
+    private void Start()
+    {
+        bgm = GameObject.Find("BGM").GetComponent<BGM>();
+        bgm.playBGM(clip);
+    }
     void Update()
     {
         if(Input.anyKeyDown)

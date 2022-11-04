@@ -48,7 +48,7 @@ public class EnemySpawnerInfinite : MonoBehaviour
                     GameData.mineral += 100 + ((wave / 3) * 50);
                 }
                 else
-                {// 마지막 웨이브였 몬스터를 강화해서 다시 시작
+                {// 마지막 웨이브였다면 몬스터를 강화해서 다시 시작
                     level++;
                     wave = 1;
                     nextWave();

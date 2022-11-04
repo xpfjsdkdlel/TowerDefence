@@ -6,8 +6,12 @@ using UnityEngine.UI;
 
 public class MainScene : MonoBehaviour
 {
-    public Fade fade;
+    Fade fade;
     Text money;
+    AudioSource audioSource; // 효과음
+    BGM bgm; // 배경음악 관리자
+    [SerializeField]
+    AudioClip clip; // 변경할 배경음악
     void Start()
     {
         money = GameObject.Find("MoneyText").GetComponent<Text>();
@@ -37,10 +41,18 @@ public class MainScene : MonoBehaviour
             fade = Instantiate(fade);
             if (fade != null)
                 fade.Init();
-            fade.FadeIn();
         }
-        else
-            fade.FadeIn();
+        fade.FadeIn();
+        bgm = GameObject.FindObjectOfType<BGM>();
+        if (bgm == null)
+        {
+            bgm = Resources.Load<BGM>("Prefabs/UI/BGM");
+            bgm = Instantiate(bgm);
+            if (bgm != null)
+                bgm.Init();
+        }
+        bgm.playBGM(clip);
+        audioSource = GetComponent<AudioSource>();
     }
     void LoadGamePlay()
     {
@@ -56,6 +68,7 @@ public class MainScene : MonoBehaviour
     }
     public void SceneChange(string SceneName)
     {
+        audioSource.Play();
         if (fade != null)
             fade.FadeOut();
         Invoke("Load" + SceneName,2.0f);

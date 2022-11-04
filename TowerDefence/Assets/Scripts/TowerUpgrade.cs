@@ -26,9 +26,9 @@ public class TowerUpgrade : MonoBehaviour
             infiniteScene = GameObject.Find("InfiniteScene").GetComponent<InfiniteScene>();
     }
     public void open(bool level3 = false)
-    {
+    {// 타워를 선택하면 업그레이드, 판매 버튼 활성화
         if(level3)
-        {
+        {// 타워가 3레벨일 경우 판매 버튼만 활성화
             upgrade.GetComponent<Button>().interactable = false;
             sell.GetComponent<Button>().interactable = true;
         }

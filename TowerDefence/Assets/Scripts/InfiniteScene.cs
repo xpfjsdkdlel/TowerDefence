@@ -24,6 +24,9 @@ public class InfiniteScene : MonoBehaviour
     public int life; // 해당 스테이지의 라이프
     WayPoints wayPoints;
     bool end = false;
+    BGM bgm; // 배경음악 관리자
+    [SerializeField]
+    AudioClip clip; // 변경할 배경음악
     void Start()
     {
         GameData.gameover = false;
@@ -37,10 +40,17 @@ public class InfiniteScene : MonoBehaviour
             fade = Instantiate(fade);
             if (fade != null)
                 fade.Init();
-            fade.FadeIn();
         }
-        else
-            fade.FadeIn();
+        fade.FadeIn();
+        bgm = GameObject.FindObjectOfType<BGM>();
+        if (bgm == null)
+        {
+            bgm = Resources.Load<BGM>("Prefabs/UI/BGM");
+            bgm = Instantiate(bgm);
+            if (bgm != null)
+                bgm.Init();
+        }
+        bgm.playBGM(clip);
         wayPoints = GameObject.Find("WayPoints").GetComponent<WayPoints>();
         wayPoints.Init();
         mineralText = GameObject.Find("MineralText").GetComponent<Text>();

@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class Store : MonoBehaviour
 {
-    public int number;
+    [SerializeField]
+    int number;
+    [SerializeField]
     public int price;
-    public GameObject confrim;
-    public Button button;
-    public Image image;
-    public GameObject sold;
+    GameObject confrim;
+    Button button;
+    Image image;
+    GameObject sold;
+    AudioSource audioSource;
     
     void Start()
     {
@@ -18,10 +21,11 @@ public class Store : MonoBehaviour
         button = GetComponent<Button>();
         image = GetComponent<Image>();
         sold = transform.GetChild(4).gameObject;
-
+        audioSource = GameObject.Find("TowerUpgradeScene").GetComponent<AudioSource>();
     }
     public void btnClick()
     {
+        audioSource.Play();
         GameData.index = number;
         GameData.price = price;
         for (int i = 0; i < confrim.transform.childCount; i++)
