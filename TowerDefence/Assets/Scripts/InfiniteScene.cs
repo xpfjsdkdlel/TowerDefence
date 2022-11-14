@@ -27,6 +27,7 @@ public class InfiniteScene : MonoBehaviour
     BGM bgm; // 배경음악 관리자
     [SerializeField]
     AudioClip clip; // 변경할 배경음악
+    AudioSource audioSource; // 효과음
     void Start()
     {
         GameData.gameover = false;
@@ -60,6 +61,7 @@ public class InfiniteScene : MonoBehaviour
         result = GameObject.Find("Result").GetComponent<Result>();
         result.Init();
         text = Resources.Load<GameObject>("PreFabs/UI/Enough");
+        audioSource = GetComponent<AudioSource>();
     }
     public void BuildTower(string towerName)
     {
@@ -143,6 +145,10 @@ public class InfiniteScene : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            audioSource.Play();
+        }
         if (!GameData.gameover)
         {
             mineralText.text = "" + GameData.mineral;

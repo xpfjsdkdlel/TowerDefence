@@ -28,4 +28,8 @@ public class BGM : MonoBehaviour
         audioSource.Stop();
         audioSource.clip = null;
     }
+    private void Update()
+    {
+        GetComponent<AudioSource>().volume = GameData.bgmVolume;
+    }
 }

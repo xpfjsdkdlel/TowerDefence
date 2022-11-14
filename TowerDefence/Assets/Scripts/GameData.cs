@@ -27,6 +27,8 @@ public static class GameData
     public static int unlockMinigun = 0;
     public static int unlockNapalm = 0;
     public static int unlockPlasma = 0;
+    public static float bgmVolume = 1;
+    public static float sfxVolume = 1;
     public static void Reset()
     {
         selectBlock = null;

@@ -18,6 +18,7 @@ public class Tower : MonoBehaviour
     Animator animator; // 애니메이션
     Vector3 firePos; // 투사체와 불꽃이 나올 위치
     AudioSource audioSource; // 발사음
+    Color startColor;
     void Start()
     {
         Transform t = GetComponent<Transform>();
@@ -114,10 +115,6 @@ public class Tower : MonoBehaviour
             }
         }
     }
-    void soundEffect()
-    {
-        audioSource.Play();
-    }
     // 타워가 적을 바라보도록 하는 함수
     public void LookAt(Vector3 position)
     {
@@ -136,6 +133,7 @@ public class Tower : MonoBehaviour
     }
     void Update()
     {
+        audioSource.volume = GameData.sfxVolume;
         if (!GameData.gameover)
         {
             if (target != null)

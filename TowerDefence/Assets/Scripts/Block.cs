@@ -25,26 +25,52 @@ public class Block : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        blockColor.material.color = selectColor;
         GameData.selectBlock = gameObject;
         if (gameController != null)
         {
             towerUpgrade = gameController.towerUpgrade;
-            towerUpgrade.close();
+            if(transform.childCount > 0)
+                gameController.selectTower(transform.GetChild(0).gameObject);
+            else
+            {
+                DeleteTowerInfo(); // 게임 매니저에 저장된 선택된 타워를 null로 초기화
+                towerUpgrade.close();
+            }
         }
         else if(infiniteScene != null)
         {
             towerUpgrade = infiniteScene.towerUpgrade;
-            towerUpgrade.close();
+            if (transform.childCount > 0)
+                infiniteScene.selectTower(transform.GetChild(0).gameObject);
+            else
+            {
+                DeleteTowerInfo(); // 게임 매니저에 저장된 선택된 타워를 null로 초기화
+                towerUpgrade.close();
+            }
+        }
+    }
+    void DeleteTowerInfo()
+    {// 다른 블록을 클릭하면 타워 선택 해제
+        if (gameController != null)
+        {
+            gameController.towerInfo = null;
+        }
+        else if (infiniteScene != null)
+        {
+            infiniteScene.towerInfo = null;
         }
     }
     private void Update()
     {
         if(Input.GetMouseButtonDown(0))
             blockColor.material.color = startColor;
-        if (transform.childCount > 0)
-            isBuild = true;
+        if(GameData.selectBlock == gameObject)// 선택된 블록이라면 색을 변경
+            blockColor.material.color = selectColor;
         else
-            isBuild = false;
+            blockColor.material.color = startColor;
+        if (transform.childCount > 0)
+            isBuild = true; // 이미 타워가 건설되었다면 건설 불가
+        else
+            isBuild = false; // 타워가 건설되지 않았다면 건설 가능
     }
 }

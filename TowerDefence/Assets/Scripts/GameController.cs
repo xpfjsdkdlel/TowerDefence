@@ -167,6 +167,10 @@ public class GameController : MonoBehaviour
     }
     void Update()
     {
+        if(Input.GetMouseButtonDown(0))
+        {
+            audioSource.Play();
+        }
         if (!GameData.gameover)
         {
             waveText.text = "WAVE " + GameData.wave;

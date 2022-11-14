@@ -12,6 +12,8 @@ public class MainScene : MonoBehaviour
     BGM bgm; // 배경음악 관리자
     [SerializeField]
     AudioClip clip; // 변경할 배경음악
+    [SerializeField]
+    GameObject setting;
     void Start()
     {
         money = GameObject.Find("MoneyText").GetComponent<Text>();
@@ -34,6 +36,10 @@ public class MainScene : MonoBehaviour
             GameData.unlockNapalm = 1;
         if (PlayerPrefs.HasKey("unlockPlasma"))
             GameData.unlockPlasma = 1;
+        if (PlayerPrefs.HasKey("bgmVolume"))
+            GameData.bgmVolume = PlayerPrefs.GetFloat("bgmVolume");
+        if (PlayerPrefs.HasKey("sfxVolume"))
+            GameData.sfxVolume = PlayerPrefs.GetFloat("sfxVolume");
         fade = GameObject.FindObjectOfType<Fade>();
         if (fade == null)
         {
@@ -72,6 +78,11 @@ public class MainScene : MonoBehaviour
         if (fade != null)
             fade.FadeOut();
         Invoke("Load" + SceneName,2.0f);
+    }
+    public void Setting()
+    {
+        audioSource.Play();
+        setting.SetActive(true);
     }
     public void Exit()
     {
