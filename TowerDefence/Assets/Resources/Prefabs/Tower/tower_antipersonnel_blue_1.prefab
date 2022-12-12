@@ -112,12 +112,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  range: 5
-  totalPrice: 30
+  range: 7
+  totalPrice: 50
   upgradePrice: 50
   towerType: tower_antipersonnel_blue_
   towerLevel: 1
   blaze: {fileID: 4763241879222830521, guid: de6c8db59dd84fe459e8915df45b9688, type: 3}
+  gameController: {fileID: 0}
+  infiniteScene: {fileID: 0}
 --- !u!95 &1185422550
 Animator:
   serializedVersion: 3

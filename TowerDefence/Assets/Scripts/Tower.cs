@@ -11,14 +11,13 @@ public class Tower : MonoBehaviour
     public string towerType; // 타워의 종류
     public int towerLevel; // 타워의 레벨
     [SerializeField]
-    GameObject blaze; // 타워가 공격할 때 나오는 섬광
-    GameObject target; // 공격 목표
-    GameController gameController;
-    InfiniteScene infiniteScene;
-    Animator animator; // 애니메이션
-    Vector3 firePos; // 투사체와 불꽃이 나올 위치
-    AudioSource audioSource; // 발사음
-    Color startColor;
+    private GameObject blaze; // 타워가 공격할 때 나오는 섬광
+    private GameObject target; // 공격 목표
+    public GameController gameController;
+    public InfiniteScene infiniteScene;
+    private Animator animator; // 애니메이션
+    private Vector3 firePos; // 투사체와 불꽃이 나올 위치
+    private AudioSource audioSource; // 발사음
     void Start()
     {
         Transform t = GetComponent<Transform>();
@@ -28,6 +27,7 @@ public class Tower : MonoBehaviour
         else
             infiniteScene = GameObject.Find("InfiniteScene").GetComponent<InfiniteScene>();
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = GameData.sfxVolume;
     }
     private void OnDrawGizmosSelected()
     {
@@ -114,6 +114,10 @@ public class Tower : MonoBehaviour
                 Instantiate(plasma, firePos, gameObject.transform.rotation);
             }
         }
+    }
+    void Laser()
+    {
+        audioSource.Play();
     }
     // 타워가 적을 바라보도록 하는 함수
     public void LookAt(Vector3 position)

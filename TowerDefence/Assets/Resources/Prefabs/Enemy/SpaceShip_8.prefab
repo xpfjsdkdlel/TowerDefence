@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e4c4437a781c448b1b5569f708f3a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 600
-  HP: 600
+  maxHP: 2500
+  HP: 2500
   armor: 7
   speed: 3
   mineral: 20

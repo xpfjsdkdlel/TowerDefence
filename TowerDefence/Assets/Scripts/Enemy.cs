@@ -6,21 +6,31 @@ using TMPro;
 
 public class Enemy : MonoBehaviour
 {
-    public float maxHP; // 몬스터의 최대 체력
-    public float HP; // 몬스터의 현재 체력
-    public int armor; // 몬스터의 방어력
-    public float speed; // 몬스터의 이동속도
-    public int mineral; // 몬스터를 처치했을 때 보상
-    public GameObject damageText; // 대미지 텍스트
-    public GameObject deathEffect; // 몬스터가 죽을 때 나오는 이펙트
-    public GameObject textPos; // 대미지 텍스트가 출력되는 위치
+    [SerializeField]
+    private float maxHP; // 몬스터의 최대 체력
+    [SerializeField]
+    private float HP; // 몬스터의 현재 체력
+    [SerializeField]
+    private int armor; // 몬스터의 방어력
+    [SerializeField]
+    private float speed; // 몬스터의 이동속도
+    [SerializeField]
+    private int mineral; // 몬스터를 처치했을 때 보상
+    [SerializeField]
+    private GameObject damageText; // 대미지 텍스트
+    [SerializeField]
+    private GameObject deathEffect; // 몬스터가 죽을 때 나오는 이펙트
+    [SerializeField]
+    private GameObject textPos; // 대미지 텍스트가 출력되는 위치
     public Transform target; // 이동할 곳
     int wavepointIndex = 0;
     InfiniteScene infiniteScene;
     EnemySpawnerInfinite esi;
-    public bool isBurn = false; // 화상 상태
-    GameObject flame; // 화상 상태일 때 생성할 화염 오브젝트
-    int burnDamage; // 화상 대미지
+    [SerializeField]
+    private bool isBurn = false; // 화상 상태
+    private GameObject flame; // 화상 상태일 때 생성할 화염 오브젝트
+    private int burnDamage; // 화상 대미지
+    [SerializeField]
     public GameObject HPBar; // 체력바
     void Start()
     {

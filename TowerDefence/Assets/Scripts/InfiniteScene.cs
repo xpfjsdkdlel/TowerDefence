@@ -137,7 +137,7 @@ public class InfiniteScene : MonoBehaviour
     }
     void SceneChange()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadSceneAsync("MainScene");
     }
     public void AddKill()
     {

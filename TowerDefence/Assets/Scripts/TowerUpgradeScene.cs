@@ -98,7 +98,7 @@ public class TowerUpgradeScene : MonoBehaviour
     }
     void LoadMain()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadSceneAsync("MainScene");
     }
     public void SceneChange()
     {

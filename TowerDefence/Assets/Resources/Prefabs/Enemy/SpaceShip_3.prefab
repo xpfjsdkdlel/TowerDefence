@@ -51,7 +51,7 @@ MonoBehaviour:
   HP: 200
   armor: 0
   speed: 10
-  mineral: 2
+  mineral: 5
   damageText: {fileID: 8359915571785615450, guid: 758df4d49ed2ad94594c9f4785f770cc, type: 3}
   deathEffect: {fileID: 118354, guid: a70ce0386efb58548aff183d0131cc1c, type: 3}
   textPos: {fileID: 7137035320725181548}

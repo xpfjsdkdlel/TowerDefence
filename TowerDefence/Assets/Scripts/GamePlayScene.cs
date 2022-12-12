@@ -42,7 +42,7 @@ public class GamePlayScene : MonoBehaviour
     }
     void LoadMain()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadSceneAsync("MainScene");
     }
     public void SceneChange()
     {

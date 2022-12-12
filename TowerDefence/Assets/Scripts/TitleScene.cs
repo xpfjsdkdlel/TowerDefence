@@ -20,6 +20,6 @@ public class TitleScene : MonoBehaviour
     }
     void SceneChange()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadSceneAsync("MainScene");
     }
 }

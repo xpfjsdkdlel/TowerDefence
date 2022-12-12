@@ -4,31 +4,34 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject[] waveList; // 웨이브 리스트
-    public int wave; // 현재 웨이브
-    public int maxWave; // 최대 웨이브
-    public int totalCount; // 총 적의 수
-    public int enemyCount; // 현재 적의 수
+    [SerializeField]
+    private GameObject[] waveList; // 웨이브 리스트
+    [SerializeField]
+    private int[] waveCount; // 각 웨이브의 몬스터 수
+
+    private int wave; // 현재 웨이브
+    private int maxWave; // 최대 웨이브
+    private int enemyCount; // 현재 적의 수
     public void Init()
     {
         GameData.Reset();
         wave = GameData.wave;
         maxWave = waveList.Length;
-        enemyCount = totalCount;
-        GameData.enemyCount = totalCount;
+        enemyCount = waveCount[0];
+        GameData.enemyCount = waveCount[0];
         Invoke("nextWave", 5);
     }
     void nextWave()
     {
-        GameData.enemyCount = totalCount;
+        GameData.enemyCount = waveCount[wave - 1];
         StartCoroutine("spawn");
     }
     IEnumerator spawn()
     {
-        for (int i = 0; i < totalCount; i++)
+        for (int i = 0; i < waveCount[wave - 1]; i++)
         {
             Instantiate(waveList[wave - 1], gameObject.transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1f);
         }
         yield break;
     }

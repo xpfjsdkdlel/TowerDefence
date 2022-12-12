@@ -62,15 +62,15 @@ public class MainScene : MonoBehaviour
     }
     void LoadGamePlay()
     {
-        SceneManager.LoadScene("GamePlayScene");
+        SceneManager.LoadSceneAsync("GamePlayScene");
     }
     void LoadInfinite()
     {
-        SceneManager.LoadScene("InfiniteScene");
+        SceneManager.LoadSceneAsync("InfiniteScene");
     }
     void LoadTowerUpgrade()
     {
-        SceneManager.LoadScene("TowerUpgradeScene");
+        SceneManager.LoadSceneAsync("TowerUpgradeScene");
     }
     public void SceneChange(string SceneName)
     {

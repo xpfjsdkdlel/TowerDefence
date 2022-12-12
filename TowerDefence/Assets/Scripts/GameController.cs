@@ -145,19 +145,19 @@ public class GameController : MonoBehaviour
     public void LoadNextStage() // 다음 스테이지로 넘어가는 함수
     {
         GameData.selectStage++;
-        SceneManager.LoadScene("Stage" + GameData.selectStage);
+        SceneManager.LoadSceneAsync("Stage" + GameData.selectStage);
     }
     public void LoadSelectStage() // 스테이지 선택 창으로 넘어가는 함수
     {
-        SceneManager.LoadScene("GamePlayScene");
+        SceneManager.LoadSceneAsync("GamePlayScene");
     }
     public void LoadReStart() // 스테이지를 재시작하는 함수
     {
-        SceneManager.LoadScene("Stage" + GameData.selectStage);
+        SceneManager.LoadSceneAsync("Stage" + GameData.selectStage);
     }
     public void LoadExit() // 메인화면으로 가는 함수
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadSceneAsync("MainScene");
     }
     public void SceneChange(string SceneName)
     {

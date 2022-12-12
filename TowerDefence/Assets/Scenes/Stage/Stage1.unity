@@ -2738,7 +2738,6 @@ GameObject:
   - component: {fileID: 201135038}
   - component: {fileID: 201135037}
   - component: {fileID: 201135036}
-  - component: {fileID: 201135035}
   m_Layer: 0
   m_Name: 20
   m_TagString: Untagged
@@ -2761,23 +2760,6 @@ Transform:
   m_Father: {fileID: 1199382694}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &201135035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201135033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8cae7b6f2f9c4a4ab687cdb826d6208, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startColor: {r: 0, g: 0, b: 0, a: 0}
-  selectColor: {r: 0, g: 0, b: 0, a: 0}
-  blockColor: {fileID: 0}
-  isBuild: 0
-  tower: {fileID: 0}
 --- !u!65 &201135036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3997,7 +3979,6 @@ GameObject:
   - component: {fileID: 285391073}
   - component: {fileID: 285391072}
   - component: {fileID: 285391071}
-  - component: {fileID: 285391070}
   m_Layer: 0
   m_Name: 18
   m_TagString: Untagged
@@ -4020,23 +4001,6 @@ Transform:
   m_Father: {fileID: 1199382694}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &285391070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285391068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8cae7b6f2f9c4a4ab687cdb826d6208, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startColor: {r: 0, g: 0, b: 0, a: 0}
-  selectColor: {r: 0, g: 0, b: 0, a: 0}
-  blockColor: {fileID: 0}
-  isBuild: 0
-  tower: {fileID: 0}
 --- !u!65 &285391071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7525,10 +7489,7 @@ MonoBehaviour:
   - {fileID: 1724841377419454644, guid: 5c359ac8b62245c499709ee2f6f9cafe, type: 3}
   - {fileID: 1724841377419454644, guid: a3771bbdf3fe4424a806c4fd8f3486a8, type: 3}
   - {fileID: 1724841377419454644, guid: 8d58aa0bd29052a418b3d793a3a6b332, type: 3}
-  wave: 0
-  maxWave: 0
-  totalCount: 10
-  enemyCount: 0
+  waveCount: 0a0000000a000000140000000700000014000000
 --- !u!1 &524739927
 GameObject:
   m_ObjectHideFlags: 0
