@@ -113,12 +113,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1200
-  range: 16
+  range: 20
   totalPrice: 700
   upgradePrice: 0
   towerType: tower_lethal_blue_
   towerLevel: 3
   blaze: {fileID: 9054252438580636816, guid: fd05da1b900c2fb42ba8e15122a521ae, type: 3}
+  gameController: {fileID: 0}
+  infiniteScene: {fileID: 0}
 --- !u!95 &847796815705634807
 Animator:
   serializedVersion: 3

@@ -257,6 +257,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 533574a3365382645a70506d23daea3c, type: 3}
   setting: {fileID: 1535543374}
+  bgmSlider: {fileID: 23743046}
+  sfxSlider: {fileID: 274055615}
 --- !u!4 &49714851
 Transform:
   m_ObjectHideFlags: 0
@@ -3140,6 +3142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmVolume: {fileID: 23743046}
   sfxVolume: {fileID: 274055615}
+  clickSound: {fileID: 0}
 --- !u!114 &1535543378
 MonoBehaviour:
   m_ObjectHideFlags: 0

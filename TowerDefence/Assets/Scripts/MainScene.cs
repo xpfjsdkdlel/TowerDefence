@@ -14,6 +14,10 @@ public class MainScene : MonoBehaviour
     AudioClip clip; // 변경할 배경음악
     [SerializeField]
     GameObject setting;
+    [SerializeField]
+    Slider bgmSlider;
+    [SerializeField]
+    Slider sfxSlider;
     void Start()
     {
         money = GameObject.Find("MoneyText").GetComponent<Text>();
@@ -83,6 +87,8 @@ public class MainScene : MonoBehaviour
     {
         audioSource.Play();
         setting.SetActive(true);
+        bgmSlider.value = GameData.bgmVolume;
+        sfxSlider.value = GameData.sfxVolume;
     }
     public void Exit()
     {

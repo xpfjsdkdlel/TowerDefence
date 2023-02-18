@@ -4779,7 +4779,7 @@ GameObject:
   - component: {fileID: 19955830}
   - component: {fileID: 19827454}
   - component: {fileID: 2022198223407067939}
-  - component: {fileID: 7498334485640933394}
+  - component: {fileID: 669731105490775538}
   m_Layer: 0
   m_Name: FireSphereBlast
   m_TagString: Untagged
@@ -9675,7 +9675,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7498334485640933394
+--- !u!114 &669731105490775538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9684,10 +9684,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 118354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c90f787750af8004c9b60044f37e8ff9, type: 3}
+  m_Script: {fileID: 11500000, guid: f2e6e22e7af416746802f181d14a454f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 1.5
 --- !u!1 &126504
 GameObject:
   m_ObjectHideFlags: 0

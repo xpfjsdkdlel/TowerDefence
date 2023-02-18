@@ -350,12 +350,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 50
-  range: 8
+  range: 7
   totalPrice: 400
   upgradePrice: 0
   towerType: tower_gatling_blue_
   towerLevel: 3
   blaze: {fileID: 9054252438580636816, guid: fd05da1b900c2fb42ba8e15122a521ae, type: 3}
+  gameController: {fileID: 0}
+  infiniteScene: {fileID: 0}
 --- !u!95 &7884164318948592862
 Animator:
   serializedVersion: 3

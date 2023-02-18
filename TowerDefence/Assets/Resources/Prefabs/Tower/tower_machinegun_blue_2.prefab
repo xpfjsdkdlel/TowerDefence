@@ -252,12 +252,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
-  range: 6
+  range: 8
   totalPrice: 500
   upgradePrice: 350
   towerType: tower_machinegun_blue_
   towerLevel: 2
   blaze: {fileID: 5161750554754205258, guid: ae5c45f41af4bd048b5767f8b783dfba, type: 3}
+  gameController: {fileID: 0}
+  infiniteScene: {fileID: 0}
 --- !u!95 &1464280155058652472
 Animator:
   serializedVersion: 3

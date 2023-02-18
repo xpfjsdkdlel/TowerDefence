@@ -82,15 +82,15 @@ public class Enemy : MonoBehaviour
     }
     IEnumerator Burn()
     {// 화상을 입었을 경우
-        if (isBurn && HP >= 100)
-        {// 체력이 100이상이면 화상대미지를 입음
+        if (isBurn && HP >= 50)
+        {// 체력이 50이상이면 화상대미지를 입음
             GetTrueDamage(burnDamage); // 화상대미지는 고정대미지
             flame.SetActive(true);// 불타는 모션 추가
             yield return new WaitForSeconds(0.5f);
             StartCoroutine("Burn", 0.5f);
         }
         else
-        {// 체력이 100미만으로 내려갈경우 화상이 풀림
+        {// 체력이 50미만으로 내려갈경우 화상이 풀림
             isBurn = false;
             flame.SetActive(false);
         }
@@ -103,9 +103,7 @@ public class Enemy : MonoBehaviour
         GameData.mineral += mineral;
         GameData.enemyCount--;
         if(infiniteScene != null)
-        {
             infiniteScene.AddKill(); // 킬 증가
-        }
     }
     void GetNextWaypoint()
     {
